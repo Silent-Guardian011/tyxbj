@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>JableTV</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+    background: transparent;
+}
+
+html:not(.fm-native),
+html:not(.fm-native) body {
+    background: #303840;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #C3C3C3;
+}
+
+.header {
+    height: 52px;
+    background: #181818;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    gap: 10px;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #fff;
+}
+
+.search-group {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #233339;
+    border-radius: 25px;
+    padding-right: 4px;
+}
+
+.search-group .search-box {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 0 10px;
+    height: 34px;
+    color: #C3C3C3;
+    font-size: 12px;
+}
+
+.search-group .search-btn {
+    width: 32px;
+    height: 28px;
+    background: #2563EB;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.search-group .search-btn svg {
+    width: 14px;
+    height: 14px;
+    color: #fff;
+}
+
+.category-bar {
+    display: flex;
+    gap: 8px;
+    padding: 8px 12px;
+    overflow-x: auto;
+    background: #181818;
+}
+
+.category-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.category-item {
+    padding: 6px 16px;
+    border-radius: 20px;
+    background: rgba(35, 51, 57, .6);
+    font-size: 13px;
+    white-space: nowrap;
+    color: #C3C3C3;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.category-item.active {
+    background: #2563EB;
+    color: #fff;
+}
+
+.list-section {
+    background: rgba(50, 50, 0, .3);
+    padding: 12px;
+}
+
+.list-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 保持Jable两列或多列小屏布局友好 */
+    gap: 10px;
+}
+
+/* 严格保持用户要求的展示 item 样式并适配 16:9 封面 */
+.item { display: flex; flex-direction: column; cursor: pointer; min-width: 0; }
+.item-img-wrap { position: relative; }
+.item-img { width: 100%; aspect-ratio: 16 / 9; background: #181818; border-radius: 8px 8px 0 0; object-fit: cover; display: block; }
+.img-remark { position: absolute; bottom: 6px; right: 6px; background: rgba(0,0,0,0.3); color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 4px; }
+.item-title { padding: 6px 8px; font-size: 12px; text-align: left; background: #181818; border-radius: 0 0 8px 8px; line-height: 1.3; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; min-height: 36px; }
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: rgba(195, 195, 195, .5);
+    font-size: 12px;
+}
+
+.error-tip {
+    text-align: center;
+    padding: 40px;
+    color: #E0592F;
+    font-size: 14px;
+}
+
+.load-more, .no-more {
+    text-align: center;
+    padding: 20px;
+    color: rgba(195, 195, 195, .5);
+    font-size: 12px;
+    width: 100%;
+}
+
+/* 搜索独立大遮罩层 */
+.search-overlay {
+    position: fixed;
+    inset: 0;
+    background: #303840;
+    z-index: 150;
+    display: none;
+    overflow-y: auto;
+}
+
+.search-overlay.active {
+    display: block;
+}
+
+.search-nav {
+    height: 52px;
+    background: #181818;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.search-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.close-btn {
+    background: rgba(255,255,255,.15);
+    border: none;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 吐司提示框 */
+.toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 999;
+    display: none;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+@media (min-width: 600px) {
+    .list-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .list-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div id="mainView">
+    <div class="header">
+        <div class="logo" id="siteLogo">JableTV</div>
+
+        <div class="search-group">
+            <input class="search-box" id="searchInput" placeholder="搜索Jable影片..." />
+            <button class="search-btn" id="searchBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="category-bar" id="categoryBar"></div>
+
+    <div class="list-section">
+        <div class="list-grid" id="listGrid"></div>
+        <div id="listTip"></div>
+    </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay">
+    <div class="search-nav">
+        <div class="search-title" id="searchKeywordTitle">搜索结果</div>
+        <button class="close-btn" id="searchCloseBtn">×</button>
+    </div>
+    <div class="list-section">
+        <div class="list-grid" id="searchListGrid"></div>
+        <div id="searchListTip"></div>
+    </div>
+</div>
+
+<div class="toast" id="toastNotice">正在解析并拉起播放...</div>
+
+<script>
+(function() {
+    'use strict';
+
+    const CONFIG = {
+        siteName: "JableTV",
+        siteKey: "jable",
+        apiHost: "https://jable.tv",
+
+        // 严格对照指定的标签及 cateId 映射
+        categories: [
+            { id: "big-tits", name: "巨乳" },
+            { id: "school-uniform", name: "校服" },
+            { id: "swimsuit", name: "泳衣" },
+            { id: "Cosplay", name: "角色扮演" },
+            { id: "hairless-pussy", name: "白虎" },
+            { id: "breast-milk", name: "母乳" },
+            { id: "outdoor", name: "露出" },
+            { id: "private-cam", name: "偷拍" },
+            { id: "massage", name: "按摩" }
+        ],
+
+        cache: {
+            ttl: 10 * 30 * 1000,
+            prefix: 'jable_'
+        }
+    };
+
+    const STATE = {
+        currentCategory: '',
+        currentPage: 1,
+        isLoading: false,
+        hasMore: true,
+        vodList: [],
+        
+        searchMode: false,
+        searchKeyword: '',
+        searchPage: 1,
+        searchHasMore: true,
+        searchVodList: [],
+
+        isParsing: false
+    };
+
+    const $ = (sel) => document.querySelector(sel);
+
+    function showToast(text, duration = 3000) {
+        const toast = $('#toastNotice');
+        if (!toast) return;
+        toast.textContent = text;
+        toast.style.display = 'block';
+        if (duration > 0) {
+            setTimeout(() => { toast.style.display = 'none'; }, duration);
+        }
+    }
+
+    function hideToast() {
+        const toast = $('#toastNotice');
+        if (toast) toast.style.display = 'none';
+    }
+
+    const CacheManager = {
+        getKey(category, page) {
+            return CONFIG.cache.prefix + 'cat_' + (category || 'home') + '_p' + page;
+        },
+        isValid(meta) {
+            if (!meta) return false;
+            return Date.now() - meta.timestamp < CONFIG.cache.ttl;
+        },
+        async get(key) {
+            if (window.fm?.cache) return await window.fm.cache.get(key);
+            return localStorage.getItem(key) || '';
+        },
+        async set(key, value) {
+            if (window.fm?.cache) await window.fm.cache.set(key, value);
+            else localStorage.setItem(key, value);
+        },
+        async getCache(category, page) {
+            try {
+                const key = this.getKey(category, page);
+                const metaKey = key + '_meta';
+                const [value, metaStr] = await Promise.all([this.get(key), this.get(metaKey)]);
+                if (!value || !metaStr) return null;
+                const meta = JSON.parse(metaStr);
+                if (!this.isValid(meta)) return null;
+                return JSON.parse(value);
+            } catch (e) { return null; }
+        },
+        async setCache(category, page, data) {
+            try {
+                const key = this.getKey(category, page);
+                const metaKey = key + '_meta';
+                const meta = { timestamp: Date.now() };
+                await Promise.all([this.set(key, JSON.stringify(data)), this.set(metaKey, JSON.stringify(meta))]);
+            } catch (e) {}
+        }
+    };
+
+    async function initSDK() {
+        if (window.fongmiBridge || window.fm || window.fongmi) {
+            document.documentElement.classList.add('fm-native');
+        }
+        if (!window.fm) {
+            await new Promise(resolve => {
+                const check = () => { if (window.fm) resolve(); else setTimeout(check, 30); };
+                window.addEventListener('fmsdk', check, { once: true });
+                setTimeout(resolve, 1500);
+            });
+        }
+        if (window.fm?.site) {
+            try {
+                const site = await window.fm.site();
+                STATE.siteKey = site.key || CONFIG.siteKey;
+                const logoEl = $('#siteLogo');
+                if (logoEl) logoEl.textContent = site.name || CONFIG.siteName;
+            } catch (e) {}
+        }
+    }
+
+    async function fmGet(url) {
+        console.log('GET:', url);
+        var headers = {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36",
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+          "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+          "Accept-Encoding": "gzip, deflate",
+          "Connection": "keep-alive",
+          "Sec-Fetch-Dest": "document",
+          "Sec-Fetch-Mode": "navigate",
+          "Sec-Fetch-Site": "none",
+          "Upgrade-Insecure-Requests": "1"
+        };
+        if (window.fm?.req) {
+            try {
+                const resp = await window.fm.req(url, { method: 'GET', credentials: "include", timeout: 30, headers: headers });
+                if (resp.ok) return resp.body;
+                throw new Error(resp.error || `HTTP ${resp.status}`);
+            } catch (e) {
+                console.error('GET错误:', e);
+                throw e;
+            }
+        }
+        throw new Error('fm.req不可用');
+    }
+
+    function getImageUrl(url) {
+        if (!url) return '';
+        if (window.fm?.res) return window.fm.res(url, { credentials: 'include' });
+        return url;
+    }
+
+    // 解析 Jable 的视频节点列表
+    function parseVideoList(html) {
+        const videos = [];
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        
+        // 抓取包含影片的 col 栅格容器
+        const items = doc.querySelectorAll('.col-6, .col-sm-4, .col-lg-3');
+
+        items.forEach(item => {
+            const linkEl = item.querySelector('.img-box a, a');
+            if (!linkEl) return;
+            const href = linkEl.getAttribute('href');
+            if (!href || !href.includes('/videos/')) return; // 过滤非视频结构
+
+            const imgEl = item.querySelector('img');
+            if (!imgEl) return;
+            const pic = imgEl.getAttribute('data-src') || imgEl.getAttribute('src') || '';
+
+            const titleEl = item.querySelector('.detail .title a, .title a, h6 a');
+            const name = titleEl ? titleEl.textContent.trim() : (imgEl.alt || 'Jable Video');
+            
+            const durationEl = item.querySelector('.absolute-bottom-right .label, .label');
+            const remark = durationEl ? durationEl.textContent.trim() : '';
+
+            // 去重防止单页节点干扰
+            if (!videos.some(v => v.vod_id === href)) {
+                videos.push({
+                    vod_id: href, // 保持完整绝对或相对URL用于直接抓取播放页
+                    vod_name: name,
+                    vod_pic: pic,
+                    vod_remarks: remark
+                });
+            }
+        });
+
+        return videos;
+    }
+
+    async function fetchListContent(category, page) {
+        let url;
+        if (category) {
+            // 分类标签：https://jable.tv/tags/{cateId}/{catePg}/
+            url = `${CONFIG.apiHost}/tags/${category}/${page}/`;
+        } else {
+            // 首页/最新：https://jable.tv/最新影片/page/{page}/
+            url = page > 1 
+                ? `${CONFIG.apiHost}/latest-updates/page/${page}/`
+                : `${CONFIG.apiHost}/latest-updates/`;
+        }
+        const html = await fmGet(url);
+        return parseVideoList(html);
+    }
+
+    async function fetchSearchResults(keyword, page) {
+        // 搜索：https://jable.tv/search/{keyword}/{page}/
+        const url = `${CONFIG.apiHost}/search/${encodeURIComponent(keyword)}/${page}/`;
+        const html = await fmGet(url);
+        return parseVideoList(html);
+    }
+
+    // 核心重写：免详情弹窗直接从源码匹配单引号/双引号内的 hlsUrl 变量
+    async function extractAndPlay(vod) {
+        if (STATE.isParsing) return;
+        STATE.isParsing = true;
+        showToast('正在解析直链，请稍候...', 0);
+
+        try {
+            const url = vod.vod_id.startsWith('http') ? vod.vod_id : (CONFIG.apiHost + vod.vod_id);
+            const html = await fmGet(url);
+            
+            // 匹配 var hlsUrl = 'xxx';
+            const match = html.match(/var\s+hlsUrl\s*=\s*['"]([^'"]+)['"]/);
+            
+            if (match && match[1]) {
+                const hlsUrl = match[1];
+                hideToast();
+                if (window.fm?.play) {
+                    await window.fm.play(hlsUrl, '', {});
+                } else {
+                    alert(`解析成功(非SDK环境无法自动拉起):\n${hlsUrl}`);
+                }
+            } else {
+                showToast('提取播放直链失败，源码中可能更改了结构');
+            }
+        } catch (e) {
+            console.error(e);
+            showToast('网络请求失败，请重试');
+        } finally {
+            STATE.isParsing = false;
+        }
+    }
+
+    function renderViewList(isAppend = false, newData = []) {
+        const grid = STATE.searchMode ? $('#searchListGrid') : $('#listGrid');
+        const tip = STATE.searchMode ? $('#searchListTip') : $('#listTip');
+        if (!grid || !tip) return;
+
+        if (!isAppend) {
+            grid.innerHTML = '';
+            const currentList = STATE.searchMode ? STATE.searchVodList : STATE.vodList;
+            if (STATE.isLoading) {
+                tip.innerHTML = '<div class="loading">加载中...</div>';
+                return;
+            }
+            if (currentList.length === 0) {
+                tip.innerHTML = '<div class="error-tip">暂无内容</div>';
+                return;
+            }
+        }
+
+        const targets = isAppend ? newData : (STATE.searchMode ? STATE.searchVodList : STATE.vodList);
+        const startIndex = isAppend ? (STATE.searchMode ? STATE.searchVodList.length - newData.length : STATE.vodList.length - newData.length) : 0;
+
+        targets.forEach((vod, idx) => {
+            const pic = getImageUrl(vod.vod_pic);
+            const remark = vod.vod_remarks || '';
+            const absoluteIdx = startIndex + idx;
+
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'item';
+            itemDiv.innerHTML = `
+                <div class="item-img-wrap">
+                    <img class="item-img" src="${pic}" loading="lazy" decoding="async" alt="${vod.vod_name}" />
+                    ${remark ? `<span class="img-remark">${remark}</span>` : ''}
+                </div>
+                <div class="item-title">${vod.vod_name}</div>
+            `;
+
+            // 省略详情页：直接触发解析并播放
+            itemDiv.addEventListener('click', () => {
+                const listSource = STATE.searchMode ? STATE.searchVodList : STATE.vodList;
+                extractAndPlay(listSource[absoluteIdx]);
+            });
+
+            grid.appendChild(itemDiv);
+        });
+
+        const currentHasMore = STATE.searchMode ? STATE.searchHasMore : STATE.hasMore;
+        tip.innerHTML = currentHasMore ? '<div class="load-more">上滑加载更多</div>' : '<div class="no-more">没有更多了</div>';
+    }
+
+    function renderCategories() {
+        const bar = $('#categoryBar');
+        if (!bar) return;
+
+        let html = `<div class="category-item active" data-id="">最新</div>`;
+        CONFIG.categories.forEach(cat => {
+            html += `<div class="category-item" data-id="${cat.id}">${cat.name}</div>`;
+        });
+        bar.innerHTML = html;
+
+        bar.querySelectorAll('.category-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const categoryId = item.dataset.id || '';
+                if (categoryId === STATE.currentCategory && STATE.vodList.length > 0 && !STATE.searchMode) return;
+
+                bar.querySelectorAll('.category-item').forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+
+                STATE.searchMode = false;
+                $('#searchOverlay').classList.remove('active');
+
+                STATE.currentCategory = categoryId;
+                STATE.currentPage = 1;
+                STATE.vodList = [];
+                STATE.hasMore = true;
+                loadContent(false);
+            });
+        });
+    }
+
+    async function doSearch(keyword) {
+        if (!keyword?.trim()) return;
+
+        STATE.searchMode = true;
+        STATE.searchKeyword = keyword.trim();
+        STATE.searchPage = 1;
+        STATE.searchVodList = [];
+        STATE.searchHasMore = true;
+        STATE.isLoading = true;
+
+        $('#searchKeywordTitle').textContent = `搜索: "${STATE.searchKeyword}"`;
+        $('#searchOverlay').classList.add('active');
+        renderViewList(false);
+
+        try {
+            const results = await fetchSearchResults(STATE.searchKeyword, 1);
+            STATE.searchVodList = results;
+            STATE.searchHasMore = results.length > 0;
+        } catch (e) {
+            STATE.searchVodList = [];
+        }
+
+        STATE.isLoading = false;
+        renderViewList(false);
+    }
+
+    function closeSearch() {
+        $('#searchOverlay').classList.remove('active');
+        STATE.searchMode = false;
+        STATE.searchKeyword = '';
+        STATE.searchVodList = [];
+    }
+
+    async function loadContent(forceRefresh = false) {
+        if (!forceRefresh) {
+            const cached = await CacheManager.getCache(STATE.currentCategory, STATE.currentPage);
+            if (cached) {
+                STATE.vodList = cached;
+                renderViewList(false);
+                return;
+            }
+        }
+
+        STATE.isLoading = true;
+        renderViewList(false);
+
+        try {
+            const videos = await fetchListContent(STATE.currentCategory, STATE.currentPage);
+            STATE.vodList = videos;
+            STATE.hasMore = videos.length > 0;
+            if (STATE.currentPage === 1) {
+                await CacheManager.setCache(STATE.currentCategory, STATE.currentPage, STATE.vodList);
+            }
+        } catch (e) {
+            STATE.vodList = [];
+        }
+
+        STATE.isLoading = false;
+        renderViewList(false);
+    }
+
+    async function loadMore() {
+        if (STATE.isLoading) return;
+
+        if (STATE.searchMode) {
+            if (!STATE.searchHasMore) return;
+            STATE.isLoading = true;
+            const tip = $('#searchListTip');
+            if (tip) tip.innerHTML = '<div class="loading">正在加载更多搜索结果...</div>';
+
+            const nextPage = STATE.searchPage + 1;
+            try {
+                const videos = await fetchSearchResults(STATE.searchKeyword, nextPage);
+                if (videos && videos.length > 0) {
+                    STATE.searchPage = nextPage;
+                    STATE.searchVodList = [...STATE.searchVodList, ...videos];
+                    STATE.searchHasMore = true;
+                    renderViewList(true, videos);
+                } else {
+                    STATE.searchHasMore = false;
+                    if (tip) tip.innerHTML = '<div class="no-more">没有更多了</div>';
+                }
+            } catch (e) {
+                if (tip) tip.innerHTML = '<div class="load-more">网络异常，滑动重试</div>';
+            }
+        } else {
+            if (!STATE.hasMore) return;
+            STATE.isLoading = true;
+            const tip = $('#listTip');
+            if (tip) tip.innerHTML = '<div class="loading">正在加载更多...</div>';
+
+            const nextPage = STATE.currentPage + 1;
+            try {
+                const videos = await fetchListContent(STATE.currentCategory, nextPage);
+                if (videos && videos.length > 0) {
+                    STATE.currentPage = nextPage;
+                    STATE.vodList = [...STATE.vodList, ...videos];
+                    STATE.hasMore = true;
+                    renderViewList(true, videos);
+                } else {
+                    STATE.hasMore = false;
+                    if (tip) tip.innerHTML = '<div class="no-more">没有更多了</div>';
+                }
+            } catch (e) {
+                if (tip) tip.innerHTML = '<div class="load-more">网络异常，滑动重试</div>';
+            }
+        }
+        STATE.isLoading = false;
+    }
+
+    function setupScrollListener() {
+        let scrollTimeout = null;
+        const handleScroll = () => {
+            if (scrollTimeout) return;
+            scrollTimeout = setTimeout(() => {
+                scrollTimeout = null;
+
+                const container = STATE.searchMode ? $('#searchOverlay') : window;
+                const scrollTop = STATE.searchMode ? container.scrollTop : (window.scrollY || document.documentElement.scrollTop);
+                const clientHeight = STATE.searchMode ? container.clientHeight : window.innerHeight;
+                const scrollHeight = STATE.searchMode ? container.scrollHeight : document.documentElement.scrollHeight;
+
+                const distanceToBottom = scrollHeight - scrollTop - clientHeight;
+                if (distanceToBottom < 450 || (scrollTop + clientHeight) > (scrollHeight * 0.85)) {
+                    loadMore();
+                }
+            }, 100);
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        $('#searchOverlay').addEventListener('scroll', handleScroll, { passive: true });
+    }
+
+    function bindEvents() {
+        $('#searchBtn')?.addEventListener('click', () => { doSearch($('#searchInput')?.value); });
+        $('#searchInput')?.addEventListener('keypress', (e) => { if (e.key === 'Enter') doSearch(e.target.value); });
+        $('#searchCloseBtn')?.addEventListener('click', closeSearch);
+
+        let touchStartY = 0;
+        document.addEventListener('touchstart', (e) => { touchStartY = e.touches[0].clientY; }, { passive: true });
+        document.addEventListener('touchend', (e) => {
+            const diff = touchStartY - e.changedTouches[0].clientY;
+            if (diff > 80 && window.scrollY < 50 && !STATE.isLoading && !STATE.searchMode) {
+                STATE.currentPage = 1;
+                STATE.vodList = [];
+                STATE.hasMore = true;
+                loadContent(true);
+            }
+        }, { passive: true });
+    }
+
+    async function main() {
+        await initSDK();
+        renderCategories();
+        bindEvents();
+        setupScrollListener();
+        await loadContent(false);
+    }
+
+    main().catch(console.error);
+
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1433 @@
+{
+  "logo": "/https://img.freepik.com/free-vector/cute-dolphin-swimming-cartoon-vector-icon-illustration-animal-nature-icon-isolated-flat-vector_138676-12582.jpg?semt=ais_hybrid&w=740&q=80",
+  "spider": "",
+  "sites": [
+    {
+      "name": "🐬自动加载 海豚影视交流群 TG：@hshsjk9",
+      "key": "自动加载",
+      "type": 3,
+      "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/自动加载.py"
+    },
+    {
+      "name": "🐬弹幕 海豚影视交流群 TG：@hshsjk9",
+      "key": "弹幕豆瓣",
+      "type": 3,
+      "api": "csp_SecureDanmu",
+      "searchable": 1,
+      "jar": "https://ghfast.top/https://raw.githubusercontent.com/goodcommunication/mydm/main/danmu-spider-native.jar",
+      "ext": {
+        "apiUrls": [
+          "https://danmu.iyo.us.ci/theft-dastardly-prognosis-hula-agenda2-dropkick|公益源",
+          "https://logo.saodu.work:8888/87654321|公益源1",
+          "https://dm.ljiaovm.com/luosen|公益源2"
+        ],
+        "titleMappingsUrl": "https://ghfast.top/https://raw.githubusercontent.com/goodcommunication/mydm/main/yins.json",
+        "filter": "./lib/douban.json"
+      }
+    },
+    {
+      "key": "悟圣短剧_py",
+      "name": "悟圣短剧",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/悟圣短剧.py"
+    },
+    {
+      "key": "资源管理_py",
+      "name": "资源管理",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/资源管理.py"
+    },
+    {
+      "key": "黄色仓库动态版_py",
+      "name": "黄色仓库动态版",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/黄色仓库动态版.py"
+    },
+    {
+      "key": "🐬007吃瓜.py｜🔞[成人]_py",
+      "name": "🐬007吃瓜.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬007吃瓜.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬123AV.py｜🔞[成人]_py",
+      "name": "🐬123AV.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬123AV.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬18AV.py｜🔞[成人]_py",
+      "name": "🐬18AV.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬18AV.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬2048核基地.py｜🔞[成人]_py",
+      "name": "🐬2048核基地.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬2048核基地.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬275听书.py[听书]_py",
+      "name": "🐬275听书.py[听书]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬275听书.py[听书].py"
+    },
+    {
+      "key": "🐬456电影网.py[追剧]_py",
+      "name": "🐬456电影网.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬456电影网.py[追剧].py"
+    },
+    {
+      "key": "🐬4K影视.py[追剧]_py",
+      "name": "🐬4K影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬4K影视.py[追剧].py"
+    },
+    {
+      "key": "🐬51吃瓜.py｜🔞[吃瓜]_py",
+      "name": "🐬51吃瓜.py｜🔞[吃瓜]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬51吃瓜.py｜🔞[吃瓜].py"
+    },
+    {
+      "key": "🐬51大赛.py｜🔞[吃瓜]_py",
+      "name": "🐬51大赛.py｜🔞[吃瓜]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬51大赛.py｜🔞[吃瓜].py"
+    },
+    {
+      "key": "🐬51爆料.py｜🔞[吃瓜]_py",
+      "name": "🐬51爆料.py｜🔞[吃瓜]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬51爆料.py｜🔞[吃瓜].py"
+    },
+    {
+      "key": "🐬51视频.py｜🔞[吃瓜]_py",
+      "name": "🐬51视频.py｜🔞[吃瓜]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬51视频.py｜🔞[吃瓜].py"
+    },
+    {
+      "key": "🐬58影视.py[追剧]_py",
+      "name": "🐬58影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬58影视.py[追剧].py"
+    },
+    {
+      "key": "🐬808影院.py[追剧]_py",
+      "name": "🐬808影院.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬808影院.py[追剧].py"
+    },
+    {
+      "key": "🐬818黑料网.py｜🔞[吃瓜]_py",
+      "name": "🐬818黑料网.py｜🔞[吃瓜]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬818黑料网.py｜🔞[吃瓜].py"
+    },
+    {
+      "key": "🐬8X8X.py｜🔞[成人]_py",
+      "name": "🐬8X8X.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬8X8X.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬91Porn蝌蚪窝.py｜🔞[成人]_py",
+      "name": "🐬91Porn蝌蚪窝.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬91Porn蝌蚪窝.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬91porn.py｜🔞[成人]_py",
+      "name": "🐬91porn.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬91porn.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬91吃瓜中心.py｜🔞[吃瓜]_py",
+      "name": "🐬91吃瓜中心.py｜🔞[吃瓜]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬91吃瓜中心.py｜🔞[吃瓜].py"
+    },
+    {
+      "key": "🐬91大赛(无封面).py｜🔞[吃瓜]_py",
+      "name": "🐬91大赛(无封面).py｜🔞[吃瓜]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬91大赛(无封面).py｜🔞[吃瓜].py"
+    },
+    {
+      "key": "🐬91爆料.py｜🔞[吃瓜]_py",
+      "name": "🐬91爆料.py｜🔞[吃瓜]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬91爆料.py｜🔞[吃瓜].py"
+    },
+    {
+      "key": "🐬AdultpornaAV.py｜🔞[成人]_py",
+      "name": "🐬AdultpornaAV.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬AdultpornaAV.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬BadNews.py｜🔞[成人]_py",
+      "name": "🐬BadNews.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬BadNews.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬Cam4直播.py｜🔞[成人直播]_py",
+      "name": "🐬Cam4直播.py｜🔞[成人直播]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬Cam4直播.py｜🔞[成人直播].py"
+    },
+    {
+      "key": "🐬DJ呦呦.py[音乐]_py",
+      "name": "🐬DJ呦呦.py[音乐]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬DJ呦呦.py[音乐].py"
+    },
+    {
+      "key": "🐬EPORNER.py｜🔞[成人]_py",
+      "name": "🐬EPORNER.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬EPORNER.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬FullHD.py｜🔞[成人]_py",
+      "name": "🐬FullHD.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬FullHD.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬JAV36.py｜🔞[成人]_py",
+      "name": "🐬JAV36.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬JAV36.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬Jable.py｜🔞[成人]_py",
+      "name": "🐬Jable.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬Jable.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬MiFun动漫.py[动漫]_py",
+      "name": "🐬MiFun动漫.py[动漫]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬MiFun动漫.py[动漫].py"
+    },
+    {
+      "key": "🐬MoTV.py｜🔞[成人]_py",
+      "name": "🐬MoTV.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬MoTV.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬Pandalive直播.py｜🔞[成人直播]_py",
+      "name": "🐬Pandalive直播.py｜🔞[成人直播]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬Pandalive直播.py｜🔞[成人直播].py"
+    },
+    {
+      "key": "🐬PigAV.py｜🔞[成人]_py",
+      "name": "🐬PigAV.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬PigAV.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬Pornhub.py｜🔞[成人]_py",
+      "name": "🐬Pornhub.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬Pornhub.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬TOPTV.py｜🔞[成人]_py",
+      "name": "🐬TOPTV.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬TOPTV.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬VHUB.py｜🔞[成人]_py",
+      "name": "🐬VHUB.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬VHUB.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬Xvideos.py｜🔞[成人]_py",
+      "name": "🐬Xvideos.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬Xvideos.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬catemby.py🔞[成人][磁力]_py",
+      "name": "🐬catemby.py🔞[成人][磁力]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬catemby.py🔞[成人][磁力].py"
+    },
+    {
+      "key": "🐬hanime1.py🔞[成人]_py",
+      "name": "🐬hanime1.py🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬hanime1.py🔞[成人].py"
+    },
+    {
+      "key": "🐬stripchat直播.py｜🔞[成人直播]_py",
+      "name": "🐬stripchat直播.py｜🔞[成人直播]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬stripchat直播.py｜🔞[成人直播].py"
+    },
+    {
+      "key": "🐬xhamster.py🔞｜[成人]_py",
+      "name": "🐬xhamster.py🔞｜[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬xhamster.py🔞｜[成人].py"
+    },
+    {
+      "key": "🐬七味.py[追剧]_py",
+      "name": "🐬七味.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬七味.py[追剧].py"
+    },
+    {
+      "key": "🐬七猫影视.py[追剧]_py",
+      "name": "🐬七猫影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬七猫影视.py[追剧].py"
+    },
+    {
+      "key": "🐬久久視頻.py｜🔞[成人]_py",
+      "name": "🐬久久視頻.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬久久視頻.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬五月天.py｜🔞[成人]_py",
+      "name": "🐬五月天.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬五月天.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬亚色影库.py｜🔞[成人]_py",
+      "name": "🐬亚色影库.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬亚色影库.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬今日看料.py｜🔞[吃瓜]_py",
+      "name": "🐬今日看料.py｜🔞[吃瓜]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬今日看料.py｜🔞[吃瓜].py"
+    },
+    {
+      "key": "🐬优视频.py 有🔞[追剧]_py",
+      "name": "🐬优视频.py 有🔞[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬优视频.py 有🔞[追剧].py"
+    },
+    {
+      "key": "🐬低端影视.py[追剧]_py",
+      "name": "🐬低端影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬低端影视.py[追剧].py"
+    },
+    {
+      "key": "🐬兄弟影视.py[追剧]_py",
+      "name": "🐬兄弟影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬兄弟影视.py[追剧].py"
+    },
+    {
+      "key": "🐬八天电影.py[追剧]_py",
+      "name": "🐬八天电影.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬八天电影.py[追剧].py"
+    },
+    {
+      "key": "🐬共青春影院.py[追剧]_py",
+      "name": "🐬共青春影院.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬共青春影院.py[追剧].py"
+    },
+    {
+      "key": "🐬农民影视.py[追剧]_py",
+      "name": "🐬农民影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬农民影视.py[追剧].py"
+    },
+    {
+      "key": "🐬剧OK.py[追剧]_py",
+      "name": "🐬剧OK.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬剧OK.py[追剧].py"
+    },
+    {
+      "key": "🐬努努影院.py[追剧]_py",
+      "name": "🐬努努影院.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬努努影院.py[追剧].py"
+    },
+    {
+      "key": "🐬千千影视.py(羊壳)[追剧]_py",
+      "name": "🐬千千影视.py(羊壳)[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬千千影视.py(羊壳)[追剧].py"
+    },
+    {
+      "key": "🐬午夜影院.py(羊壳观看)｜🔞[成人]_py",
+      "name": "🐬午夜影院.py(羊壳观看)｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬午夜影院.py(羊壳观看)｜🔞[成人].py"
+    },
+    {
+      "key": "🐬华数TV.py[追剧]_py",
+      "name": "🐬华数TV.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬华数TV.py[追剧].py"
+    },
+    {
+      "key": "🐬可可影视.py[追剧]_py",
+      "name": "🐬可可影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬可可影视.py[追剧].py"
+    },
+    {
+      "key": "🐬咖啡体育直播.py[直播]_py",
+      "name": "🐬咖啡体育直播.py[直播]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬咖啡体育直播.py[直播].py"
+    },
+    {
+      "key": "🐬哇哇APP.py[追剧]_py",
+      "name": "🐬哇哇APP.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬哇哇APP.py[追剧].py"
+    },
+    {
+      "key": "🐬哔哩直播.py[直播]_py",
+      "name": "🐬哔哩直播.py[直播]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬哔哩直播.py[直播].py"
+    },
+    {
+      "key": "🐬喜福短剧.py[短剧]_py",
+      "name": "🐬喜福短剧.py[短剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬喜福短剧.py[短剧].py"
+    },
+    {
+      "key": "🐬嘀嗒影视.py[追剧]_py",
+      "name": "🐬嘀嗒影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬嘀嗒影视.py[追剧].py"
+    },
+    {
+      "key": "🐬四虎视频.py｜🔞[成人]_py",
+      "name": "🐬四虎视频.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬四虎视频.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬多瑙影院.py[追剧]_py",
+      "name": "🐬多瑙影院.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬多瑙影院.py[追剧].py"
+    },
+    {
+      "key": "🐬大屌视频.py｜🔞[成人]_py",
+      "name": "🐬大屌视频.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬大屌视频.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬太乙影视.py[追剧]_py",
+      "name": "🐬太乙影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬太乙影视.py[追剧].py"
+    },
+    {
+      "key": "🐬奇优影院.py[追剧]_py",
+      "name": "🐬奇优影院.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬奇优影院.py[追剧].py"
+    },
+    {
+      "key": "🐬奇点影视.py[追剧]_py",
+      "name": "🐬奇点影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬奇点影视.py[追剧].py"
+    },
+    {
+      "key": "🐬妈妈自拍.py｜🔞[成人]_py",
+      "name": "🐬妈妈自拍.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬妈妈自拍.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬妲己.py｜🔞[成人]_py",
+      "name": "🐬妲己.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬妲己.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬威视TV.py[追剧]_py",
+      "name": "🐬威视TV.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬威视TV.py[追剧].py"
+    },
+    {
+      "key": "🐬小鸭子看看.py 有🔞[追剧]_py",
+      "name": "🐬小鸭子看看.py 有🔞[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬小鸭子看看.py 有🔞[追剧].py"
+    },
+    {
+      "key": "🐬山楂影视.py[追剧]_py",
+      "name": "🐬山楂影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬山楂影视.py[追剧].py"
+    },
+    {
+      "key": "🐬布布追剧.py[追剧]_py",
+      "name": "🐬布布追剧.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬布布追剧.py[追剧].py"
+    },
+    {
+      "key": "🐬影视大全.py[追剧]_py",
+      "name": "🐬影视大全.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬影视大全.py[追剧].py"
+    },
+    {
+      "key": "🐬怦然心动.py｜🔞[成人]_py",
+      "name": "🐬怦然心动.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬怦然心动.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬悟圣短剧.py[短剧]_py",
+      "name": "🐬悟圣短剧.py[短剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬悟圣短剧.py[短剧].py"
+    },
+    {
+      "key": "🐬悟空传媒.py｜🔞[成人]_py",
+      "name": "🐬悟空传媒.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬悟空传媒.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬悟空影视.py[追剧]_py",
+      "name": "🐬悟空影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬悟空影视.py[追剧].py"
+    },
+    {
+      "key": "🐬悦听吧.py[听书]_py",
+      "name": "🐬悦听吧.py[听书]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬悦听吧.py[听书].py"
+    },
+    {
+      "key": "🐬撸一天.py｜🔞[成人]_py",
+      "name": "🐬撸一天.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬撸一天.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬教授.py｜🔞[成人]_py",
+      "name": "🐬教授.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬教授.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬星河影视.py[追剧]_py",
+      "name": "🐬星河影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬星河影视.py[追剧].py"
+    },
+    {
+      "key": "🐬星芽短剧.py[短剧]_py",
+      "name": "🐬星芽短剧.py[短剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬星芽短剧.py[短剧].py"
+    },
+    {
+      "key": "🐬星辰影院.py[追剧]_py",
+      "name": "🐬星辰影院.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬星辰影院.py[追剧].py"
+    },
+    {
+      "key": "🐬映像星球.py[追剧]_py",
+      "name": "🐬映像星球.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬映像星球.py[追剧].py"
+    },
+    {
+      "key": "🐬枝枝影视.py[追剧]_py",
+      "name": "🐬枝枝影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬枝枝影视.py[追剧].py"
+    },
+    {
+      "key": "🐬柯南影视.py[追剧]_py",
+      "name": "🐬柯南影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬柯南影视.py[追剧].py"
+    },
+    {
+      "key": "🐬樱花传媒.py｜🔞[成人]_py",
+      "name": "🐬樱花传媒.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬樱花传媒.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬每日大乱斗.py｜🔞[吃瓜]_py",
+      "name": "🐬每日大乱斗.py｜🔞[吃瓜]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬每日大乱斗.py｜🔞[吃瓜].py"
+    },
+    {
+      "key": "🐬每日大赛.py｜🔞[吃瓜]_py",
+      "name": "🐬每日大赛.py｜🔞[吃瓜]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬每日大赛.py｜🔞[吃瓜].py"
+    },
+    {
+      "key": "🐬毒舌影视.py[追剧]_py",
+      "name": "🐬毒舌影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬毒舌影视.py[追剧].py"
+    },
+    {
+      "key": "🐬永乐视频.py[追剧]_py",
+      "name": "🐬永乐视频.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬永乐视频.py[追剧].py"
+    },
+    {
+      "key": "🐬河马剧场.py[短剧]_py",
+      "name": "🐬河马剧场.py[短剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬河马剧场.py[短剧].py"
+    },
+    {
+      "key": "🐬油管.py[其他]_py",
+      "name": "🐬油管.py[其他]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬油管.py[其他].py"
+    },
+    {
+      "key": "🐬油管直播.py[直播]_py",
+      "name": "🐬油管直播.py[直播]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬油管直播.py[直播].py"
+    },
+    {
+      "key": "🐬泥视频.py[追剧]_py",
+      "name": "🐬泥视频.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬泥视频.py[追剧].py"
+    },
+    {
+      "key": "🐬热播APP.py[追剧]_py",
+      "name": "🐬热播APP.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬热播APP.py[追剧].py"
+    },
+    {
+      "key": "🐬熊猫视频.py｜🔞[成人]_py",
+      "name": "🐬熊猫视频.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬熊猫视频.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬爆片库.py｜🔞[成人]_py",
+      "name": "🐬爆片库.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬爆片库.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬爱壹帆.py[追剧]_py",
+      "name": "🐬爱壹帆.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬爱壹帆.py[追剧].py"
+    },
+    {
+      "key": "🐬爱看机器人.py[追剧]_py",
+      "name": "🐬爱看机器人.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬爱看机器人.py[追剧].py"
+    },
+    {
+      "key": "🐬猫咪AV.py｜🔞[成人]_py",
+      "name": "🐬猫咪AV.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬猫咪AV.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬猫咪TV.py｜🔞[成人]_py",
+      "name": "🐬猫咪TV.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬猫咪TV.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬瓜子APP.py[追剧]_py",
+      "name": "🐬瓜子APP.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬瓜子APP.py[追剧].py"
+    },
+    {
+      "key": "🐬皮皮虾.py[追剧]_py",
+      "name": "🐬皮皮虾.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬皮皮虾.py[追剧].py"
+    },
+    {
+      "key": "🐬真实人妻.py｜🔞[成人]_py",
+      "name": "🐬真实人妻.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬真实人妻.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬短剧聚合.py[短剧]_py",
+      "name": "🐬短剧聚合.py[短剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬短剧聚合.py[短剧].py"
+    },
+    {
+      "key": "🐬神秘电影.py｜🔞[成人]_py",
+      "name": "🐬神秘电影.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬神秘电影.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬神马影视.py[追剧]_py",
+      "name": "🐬神马影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬神马影视.py[追剧].py"
+    },
+    {
+      "key": "🐬禁片天堂.py｜🔞[成人]_py",
+      "name": "🐬禁片天堂.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬禁片天堂.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬福利天堂.py｜🔞[成人]_py",
+      "name": "🐬福利天堂.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬福利天堂.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬美剧天堂.py[追剧]_py",
+      "name": "🐬美剧天堂.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬美剧天堂.py[追剧].py"
+    },
+    {
+      "key": "🐬聚合直播.py[直播]_py",
+      "name": "🐬聚合直播.py[直播]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬聚合直播.py[直播].py"
+    },
+    {
+      "key": "🐬腾讯视频.py(关梯)[追剧]_py",
+      "name": "🐬腾讯视频.py(关梯)[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬腾讯视频.py(关梯)[追剧].py"
+    },
+    {
+      "key": "🐬色播聚合.py｜🔞[成人直播]_py",
+      "name": "🐬色播聚合.py｜🔞[成人直播]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬色播聚合.py｜🔞[成人直播].py"
+    },
+    {
+      "key": "🐬茶杯狐.py[追剧]_py",
+      "name": "🐬茶杯狐.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬茶杯狐.py[追剧].py"
+    },
+    {
+      "key": "🐬草榴视频区.py｜🔞[成人]_py",
+      "name": "🐬草榴视频区.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬草榴视频区.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬萝莉AV.py｜🔞[成人]_py",
+      "name": "🐬萝莉AV.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬萝莉AV.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬蛋挞TV.py[追剧]_py",
+      "name": "🐬蛋挞TV.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬蛋挞TV.py[追剧].py"
+    },
+    {
+      "key": "🐬蜜桃视频.py(羊壳观看)｜🔞[成人]_py",
+      "name": "🐬蜜桃视频.py(羊壳观看)｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬蜜桃视频.py(羊壳观看)｜🔞[成人].py"
+    },
+    {
+      "key": "🐬蝶卡影视.py[追剧]_py",
+      "name": "🐬蝶卡影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬蝶卡影视.py[追剧].py"
+    },
+    {
+      "key": "🐬袋鼠影视.py[追剧]_py",
+      "name": "🐬袋鼠影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬袋鼠影视.py[追剧].py"
+    },
+    {
+      "key": "🐬观风影视.py[追剧]_py",
+      "name": "🐬观风影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬观风影视.py[追剧].py"
+    },
+    {
+      "key": "🐬视觉影院.py[追剧]_py",
+      "name": "🐬视觉影院.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬视觉影院.py[追剧].py"
+    },
+    {
+      "key": "🐬追光影视.py[追剧]_py",
+      "name": "🐬追光影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬追光影视.py[追剧].py"
+    },
+    {
+      "key": "🐬酷我音乐.py[音乐]_py",
+      "name": "🐬酷我音乐.py[音乐]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬酷我音乐.py[音乐].py"
+    },
+    {
+      "key": "🐬采集聚合.py[追剧]_py",
+      "name": "🐬采集聚合.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬采集聚合.py[追剧].py"
+    },
+    {
+      "key": "🐬采集聚合成人.py｜🔞[成人]_py",
+      "name": "🐬采集聚合成人.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬采集聚合成人.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬金牌APP.py[追剧]_py",
+      "name": "🐬金牌APP.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬金牌APP.py[追剧].py"
+    },
+    {
+      "key": "🐬韩国熊猫直播.py[直播]_py",
+      "name": "🐬韩国熊猫直播.py[直播]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬韩国熊猫直播.py[直播].py"
+    },
+    {
+      "key": "🐬韩国色情电影.py｜🔞[成人]_py",
+      "name": "🐬韩国色情电影.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬韩国色情电影.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬韩小圈.py[追剧]_py",
+      "name": "🐬韩小圈.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬韩小圈.py[追剧].py"
+    },
+    {
+      "key": "🐬香肠派对.py｜🔞[成人]_py",
+      "name": "🐬香肠派对.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬香肠派对.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬香蕉视频.py｜🔞[成人]_py",
+      "name": "🐬香蕉视频.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬香蕉视频.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬骚火影视.py[追剧]_py",
+      "name": "🐬骚火影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬骚火影视.py[追剧].py"
+    },
+    {
+      "key": "🐬高端视频.py｜🔞[成人]_py",
+      "name": "🐬高端视频.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬高端视频.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬麒麟影视.py[追剧]_py",
+      "name": "🐬麒麟影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬麒麟影视.py[追剧].py"
+    },
+    {
+      "key": "🐬麦田影院.py[追剧]_py",
+      "name": "🐬麦田影院.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬麦田影院.py[追剧].py"
+    },
+    {
+      "key": "🐬麻花影视.py[追剧]_py",
+      "name": "🐬麻花影视.py[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬麻花影视.py[追剧].py"
+    },
+    {
+      "key": "🐬麻豆免费在线播放.py｜🔞[成人]_py",
+      "name": "🐬麻豆免费在线播放.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬麻豆免费在线播放.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬麻豆社.py｜🔞[成人]_py",
+      "name": "🐬麻豆社.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬麻豆社.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬黄色仓库.py｜🔞[成人]_py",
+      "name": "🐬黄色仓库.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬黄色仓库.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬黄色仓库动态版.py｜🔞[成人]_py",
+      "name": "🐬黄色仓库动态版.py｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬黄色仓库动态版.py｜🔞[成人].py"
+    },
+    {
+      "key": "🐬黄豆短剧.py有🔞[短剧]_py",
+      "name": "🐬黄豆短剧.py有🔞[短剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬黄豆短剧.py有🔞[短剧].py"
+    },
+    {
+      "key": "🐬黑料不打烊.py｜🔞[吃瓜]_py",
+      "name": "🐬黑料不打烊.py｜🔞[吃瓜]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬黑料不打烊.py｜🔞[吃瓜].py"
+    },
+    {
+      "key": "🐬黑料网.py｜🔞[吃瓜]_py",
+      "name": "🐬黑料网.py｜🔞[吃瓜]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./py/🐬黑料网.py｜🔞[吃瓜].py"
+    },
+    {
+      "key": "🐬布布追剧.js[追剧]_js",
+      "name": "🐬布布追剧.js[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./js/🐬布布追剧.js[追剧].js"
+    },
+    {
+      "key": "🐬拾光影视.js[追剧]_js",
+      "name": "🐬拾光影视.js[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./js/🐬拾光影视.js[追剧].js"
+    },
+    {
+      "key": "🐬枫叶影院.js(关梯)[追剧]_js",
+      "name": "🐬枫叶影院.js(关梯)[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./js/🐬枫叶影院.js(关梯)[追剧].js"
+    },
+    {
+      "key": "🐬片库.js(关梯)[追剧]_js",
+      "name": "🐬片库.js(关梯)[追剧]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./js/🐬片库.js(关梯)[追剧].js"
+    },
+    {
+      "key": "🐬麻豆.js｜🔞[成人]_js",
+      "name": "🐬麻豆.js｜🔞[成人]",
+      "type": 3,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "api": "./js/🐬麻豆.js｜🔞[成人].js"
+    }
+  ]
+}

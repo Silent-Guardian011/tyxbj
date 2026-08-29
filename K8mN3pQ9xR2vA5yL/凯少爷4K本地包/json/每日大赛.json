@@ -1,0 +1,29 @@
+{
+    "作者": "h",
+    "站名": "每日大赛自动挡",
+    "请求头": "User-Agent@Mozilla/5.0 (Linux；； Android 16；； 2510DRK44C Build/BP2A.250605.031.A3) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/143.0.7499.192 Mobile Safari/537.36",
+	"后缀秘文": "https://www.valgiwwr.com/[工具:源码#B3b3Jkcy5yYW5kb20oKSArICcu截取AgICAgICAgIC]",
+	"后缀解码": "{{后缀秘文}}[工具:解b64]",
+	"真实后缀": "{{后缀解码}}[替换:'*>>/]",
+    "域名-c": "https://cnmlgb.{{真实后缀}}",
+	"数组": "<meta itemprop=\"url mainEntityOfPage\"&&</article>[不包含:rel=\"sponsored nofollow\"]||往期内容--<div class=\"brick\">&&</div>||标签云--<div id=\"archives-tags\">&&<ul class=\"page-navigator\">分割(前:<a class=\"itags\")",
+	"标题": "itemprop=\"headline\">&&</h2>||往期内容--</span>&&</a>||标签云--\">&&</a>",
+	"副标题": "<span itemprop=\"datePublished\"*content=\"*\">&&</span>||往期内容--<span class=\"time\">&&</span>",
+	"简介": "</blockquote>*<p>&&</p>",
+	"图片": "loadBannerDirect('&&',",
+    "图片代理": "1",
+	"链接": "<a href=\"&&\"||标签云--href=\"&&\"+{catePg}/",
+    "播放数组": "<div class=\"dpla&&<table>",//覆盖全部播放内容
+    "播放列表": "yer\"&&</div>",//覆盖单集内容
+    "播放标题": "data-video_id=\"&&\"",//标题
+    "播放链接": "\"mutex\":true,*\"video\":{\"url\":\"&&\"",//可以是链接，也可以是跳转播放链接
+	"嗅探词": ".m3u8",
+	"直接播放": "",
+	"搜索模式": "1",
+    "二级目录": "标签云|folder-0-0-H",
+    "二级ID": "",
+    "特殊分类链接": "往期内容${{域名-c}}archives/page/{catePg}/#标签云${{域名-c}}tags/{catePg}/",
+	"搜索url": "{{域名-c}}search/{wd}/{pg}/",
+    "分类url": "{{域名-c}}category/{cateId}/{catePg}/",
+    "分类": "每日大赛$mrds#世界杯区$sjbq#主题大赛$ztds#热搜吃瓜$rstt#校园学生$xazd#必撸大赛$blyp#反差泄密$fctg#网红黑料$mhds#猎奇重口$lqdp#AV看片$jdsj#明星大赛$mxwh#动漫之家$smdh#影视国漫$dypd#cos写真$mtds#声控ASMR$ysds#寸止挑战$czds#混剪PMV$hjds#原创投稿$tgds#欧美精品$omjp#全网参赛$qwcs#往期内容#标签云"
+}

@@ -1,0 +1,21 @@
+{
+    "作者": "h",
+    "站名": "片吧365",
+    "请求头": "User-Agent@Mozilla/5.0 (Linux；； Android 16；； 2510DRK44C Build/BP2A.250605.031.A3) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/143.0.7499.192 Mobile Safari/537.36",
+	"主页url": "https://hsex1.cc/",
+	"数组": "<div class=\"col-xs-6 col-md-3\">&&<div class=\"caption title\">",
+	"标题": "title=\"&&\"",
+	"图片": "style=\"background-image:*url('&&')\"",
+	"链接": "https://hsex1.cc/+href=\"&&\"",
+	"嗅探词": ".m3u8",
+	"跳转播放链接": "urlDecode(src=\"https://player.centercdn.top/player.html?video_url=&&&poster_url)",
+	"直接播放": "1",
+	"搜索模式": "1",
+	"搜索url": "https://hsex1.cc/search-{pg}.htm?search={wd}&sort=new",
+	"特殊分类链接":"最新$https://hsex1.cc/list-{catePg}.htm?sort={by}#周榜$https://hsex1.cc/top7_list-{catePg}.htm#月榜$https://hsex1.cc/top_list-{catePg}.htm#5分钟$https://hsex1.cc/5min_list-{catePg}.htm?sort={by}#10分钟$https://hsex1.cc/long_list-{catePg}.htm?sort={by}",
+    "分类url": "https://hsex1.cc/search-{catePg}.htm?search={cateId}&sort=new",
+    "分类": "最新#周榜#月榜#5分钟#10分钟#自定义词条$按摩",
+    "排序": "最近更新$new#最多观看$hot",
+    "类型": "空||空||空||空||空||按摩&偷情&汉服&换妻&舞蹈生&春药&白浆&丝袜"
+}
+//丝袜以后的内容为自定义搜索内容。按需改动。在"类型":的最后添加A&B&C&D即可。不限词条不限数量。如&男性自慰&瑜伽裤&白虎。

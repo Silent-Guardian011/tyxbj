@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>菜菜🥬主页</title>
+    <style>
+        :root {
+            --panel-rgb: 42, 50, 58;
+            --panel: rgba(var(--panel-rgb), .62);
+            --panel-soft: rgba(var(--panel-rgb), .44);
+            --panel-strong: rgba(var(--panel-rgb), .86);
+            --line: rgba(255, 255, 255, .16);
+            --text: #f7fbff;
+            --muted: rgba(247, 251, 255, .68);
+            --accent: #ff6b35;
+            --accent2: #ffb86b;
+            --bad: #ff5c7a;
+            --ok: #68e39a;
+            --radius: 18px;
+            --shadow: 0 18px 50px rgba(0, 0, 0, .28)
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            margin: 0;
+            min-height: 100%;
+            /* 新背景：从目标网站提取的深色渐变 + 动态光影 */
+            background: linear-gradient(135deg, #0b0e14 0%, #1a1f2b 40%, #14181f 100%);
+            background-attachment: fixed;
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif
+        }
+
+        /* 增加一个微妙的动态光晕效果 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 20%, rgba(255, 107, 53, .06) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 80%, rgba(255, 184, 107, .04) 0%, transparent 50%);
+            animation: auraPulse 12s ease-in-out infinite alternate;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        @keyframes auraPulse {
+            0% {
+                opacity: 0.6;
+                transform: scale(1) rotate(0deg);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1.05) rotate(3deg);
+            }
+        }
+
+        .app {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            padding: 10px 10px 28px
+        }
+
+        .top {
+            position: relative;
+            z-index: 1;
+            padding: 8px 0 10px;
+            border-bottom: 0
+        }
+
+        .bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 0;
+        }
+
+        .brand {
+            flex: 0 0 auto;
+            font-size: 21px;
+            font-weight: 900;
+            letter-spacing: .5px;
+            text-shadow: 0 2px 14px rgba(0, 0, 0, .35)
+        }
+
+        .brand b {
+            color: var(--accent2)
+        }
+
+        .search {
+            flex: 1;
+            display: flex;
+            gap: 8px;
+            min-width: 0;
+            align-items: center;
+            background: rgba(255, 255, 255, .10);
+            border: 1px solid rgba(255, 255, 255, .14);
+            border-radius: 999px;
+            padding: 6px 7px 6px 13px;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05)
+        }
+
+        .search input {
+            flex: 1;
+            min-width: 0;
+            background: transparent;
+            border: 0;
+            outline: 0;
+            color: var(--text);
+            font-size: 15px
+        }
+
+        .search input::placeholder {
+            color: var(--muted)
+        }
+
+        button,
+        .btn {
+            border: 1px solid var(--line);
+            background: var(--panel-soft);
+            color: var(--text);
+            border-radius: 999px;
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer
+        }
+
+        .btn.primary,
+        button.primary {
+            border-color: rgba(255, 107, 53, .45);
+            background: linear-gradient(135deg, rgba(255, 107, 53, .90), rgba(255, 184, 107, .72));
+            color: #ffffff;
+            font-weight: 800
+        }
+
+        .tabs {
+            display: flex;
+            gap: 8px;
+            overflow: auto;
+            padding: 10px 2px 0;
+            scrollbar-width: none
+        }
+
+        .tabs::-webkit-scrollbar {
+            display: none
+        }
+
+        .tab {
+            white-space: nowrap;
+            border-radius: 999px;
+            padding: 8px 14px;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .12);
+            color: var(--muted);
+            cursor: pointer;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .tab.active {
+            background: linear-gradient(135deg, rgba(255, 107, 53, .55), rgba(255, 184, 107, .30));
+            color: var(--text);
+            border-color: rgba(255, 184, 107, .58);
+            font-weight: 800
+        }
+
+        .status {
+            margin: 10px 2px;
+            color: var(--muted);
+            font-size: 14px;
+            min-height: 24px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px
+        }
+
+        .card {
+            position: relative;
+            min-width: 0;
+            border-radius: 15px;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(255, 255, 255, .09), rgba(255, 255, 255, .045));
+            border: 1px solid rgba(255, 255, 255, .12);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, .22);
+            cursor: pointer;
+            padding: 14px 12px;
+            display: flex;
+            flex-direction: column;
+            transition: 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent2);
+        }
+
+        .card .name {
+            font-weight: 800;
+            font-size: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .card .name .tag {
+            font-size: 10px;
+            background: var(--accent);
+            color: #fff;
+            padding: 0 8px;
+            border-radius: 999px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .card .remark {
+            margin-top: 6px;
+            color: var(--muted);
+            font-size: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .card .icon-box {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: rgba(255,255,255,.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .section {
+            margin: 16px 0
+        }
+        .section-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 2px 10px
+        }
+        .section-title h2 {
+            margin: 0;
+            font-size: 17px;
+            letter-spacing: .3px
+        }
+
+        /* Detail Sheet */
+        .sheet {
+            position: fixed;
+            inset: 0;
+            z-index: 40;
+            display: none;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+            overflow: hidden;
+            align-items: flex-end;
+            justify-content: center;
+        }
+        .sheet.active {
+            display: flex;
+        }
+        .sheet-inner {
+            width: 100%;
+            max-width: 500px;
+            max-height: 90vh;
+            padding: 12px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .detail-panel {
+            background: linear-gradient(135deg, rgba(64, 35, 30, .92), rgba(30, 24, 24, .94));
+            border: 1px solid rgba(255, 255, 255, .10);
+            border-radius: 22px;
+            box-shadow: var(--shadow);
+            padding: 20px 16px 28px;
+            margin-bottom: 20px;
+            touch-action: pan-y;
+        }
+        .detail-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 0 12px;
+            color: rgba(255,255,255,.94);
+            word-break: break-all;
+        }
+        .detail-desc {
+            color: rgba(255,255,255,.7);
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 8px 0 20px;
+        }
+        .detail-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .detail-actions .btn {
+            flex: 1;
+            min-width: 100px;
+            text-align: center;
+            padding: 12px 16px;
+            border-radius: 999px;
+            font-weight: 700;
+            background: rgba(255,255,255,.08);
+            border: 1px solid var(--line);
+            color: var(--text);
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .detail-actions .btn.primary {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+        .detail-actions .btn.copy-btn {
+            background: rgba(255,184,107,.2);
+            border-color: var(--accent2);
+        }
+        .empty {
+            padding: 30px 18px;
+            text-align: center;
+            color: var(--muted);
+            background: var(--panel-soft);
+            border: 1px dashed var(--line);
+            border-radius: var(--radius)
+        }
+        .focusable:focus,
+        .card:focus,
+        button:focus,
+        .tab:focus,
+        input:focus {
+            outline: 2px solid rgba(255, 184, 107, .76);
+            outline-offset: 2px;
+        }
+
+        #closeDetail {
+            margin: 0 0 12px 0;
+            padding: 10px 20px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 184, 107, .55);
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        @media (min-width:720px) {
+            .grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr))
+            }
+            .app {
+                padding: 18px 28px 44px
+            }
+        }
+        @media (min-width:1100px) {
+            .grid {
+                grid-template-columns: repeat(5, minmax(0, 1fr))
+            }
+            .app {
+                max-width: 1380px;
+                margin: 0 auto
+            }
+        }
+        @media (max-width:480px) {
+            .grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 8px;
+            }
+            .brand {
+                font-size: 18px
+            }
+            .search input {
+                font-size: 13px
+            }
+            .detail-panel {
+                padding: 16px 12px;
+            }
+        }
+        /* toast */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--panel-strong);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            font-size: 14px;
+            z-index: 99;
+            backdrop-filter: blur(4px);
+            display: none;
+        }
+        .toast.show {
+            display: block;
+            animation: fadeUp 0.3s ease;
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app" id="app">
+        <div class="top">
+            <div class="bar">
+                <div class="brand">菜菜🥬<b>主页</b></div>
+                <form class="search" id="searchForm">
+                    <input id="kw" class="focusable" type="text" placeholder="搜索站点、工具、接口…" autocomplete="off" />
+                    <button class="primary focusable" type="submit">搜索</button>
+                </form>
+            </div>
+            <div class="tabs" id="tabs"></div>
+        </div>
+        <div class="status" id="status">✨ 共 <span id="countDisplay">0</span> 个资源</div>
+        <main id="content"></main>
+    </div>
+
+    <!-- Detail Sheet -->
+    <div class="sheet" id="detailSheet">
+        <div class="sheet-inner">
+            <div class="detail-panel" id="detailPanel">
+                <button id="closeDetail">← 返回</button>
+                <div id="detailContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+
+    <script>
+        (function(){
+            'use strict';
+
+            // ---------- 数据：从菜菜主页提取并分类 ----------
+            const DATA = [
+                // ===== TVbox 接口 =====
+                { id: 1, category: 'tvbox', title: '菜菜影视', desc: '菜菜影视 JSON 接口', url: 'https://gh.jasonzeng.dev/https://raw.githubusercontent.com/lc529180405/caicai/refs/heads/main/cai/ys.json', icon: '📺' },
+                { id: 2, category: 'tvbox', title: '菜菜采集', desc: '菜菜采集 JSON 接口', url: 'https://gh.jasonzeng.dev/https://raw.githubusercontent.com/lc529180405/caicai/refs/heads/main/cai/cj.json', icon: '📡' },
+                { id: 3, category: 'tvbox', title: '集多vox', desc: '集多 vox 接口', url: 'http://rihou.cc:88/demo.php', icon: '🔗' },
+                { id: 4, category: 'tvbox', title: '巧技', desc: '巧技 TVbox 接口', url: 'http://cdn.qiaoji8.com/tvbox.json', icon: '🛠️' },
+                { id: 5, category: 'tvbox', title: '集多短剧', desc: '集多短剧接口', url: 'http://jx.3116598.xyz/dj/JD.json', icon: '🎬' },
+                { id: 6, category: 'tvbox', title: '乐哥短剧', desc: '乐哥短剧接口', url: 'http://wuguangle.serv00.net/dj.json', icon: '🎭' },
+                { id: 7, category: 'tvbox', title: '饭太硬', desc: '饭太硬 TV 接口', url: 'http://fty.888484.xyz/tv', icon: '🍚' },
+                { id: 8, category: 'tvbox', title: 'FongMI', desc: '高天流云 0827 接口', url: 'https://gh.jasonzeng.dev/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0827.json', icon: '🔥' },
+                { id: 9, category: 'tvbox', title: '放牛', desc: '王二小接口', url: 'http://tvbox.王二小放牛娃.top', icon: '💥' },
+                { id: 10, category: 'tvbox', title: '肥猫', desc: '好大一只猫', url: 'http://肥猫.net/', icon: '🌙' },
+                { id: 11, category: 'tvbox', title: '小米', desc: 'XBPQ 接口', url: 'https://cnb.cool/xiaomi666888/devcontainer/-/git/raw/main/gege.json', icon: '🍆' },
+                { id: 12, category: 'tvbox', title: 'PG one', desc: '高天流云 0825 接口', url: 'https://gh.jasonzeng.dev/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0825.json', icon: '🐱' },
+                { id: 13, category: 'tvbox', title: '讴歌', desc: '讴歌接口', url: 'http://tv.nxog.top/m/', icon: '🎤' },
+                { id: 14, category: 'tvbox', title: '高天流云 js', desc: '高天流云 JS 接口', url: 'https://gh.jasonzeng.dev/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json', icon: '☁️' },
+                { id: 15, category: 'tvbox', title: '香雅情 XYQ', desc: 'XYQ TVbox 接口', url: 'https://gh.jasonzeng.dev/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json', icon: '🌸' },
+                { id: 16, category: 'tvbox', title: '肥猫', desc: '肥猫 live 接口', url: 'http://肥猫.live', icon: '🐈' },
+                { id: 17, category: 'tvbox', title: '潇洒', desc: '潇洒 接口', url: 'https://www.252035.xyz/z/FongMi.json', icon: '🌬️' },
+                { id: 18, category: 'tvbox', title: '小白', desc: '小白 TVbox 接口', url: 'http://bp.tvbox.cam/', icon: '🐇' },
+
+                // ===== 友情链接 =====
+                { id: 19, category: 'friends', title: '集多主页', desc: 'XBPQ大师，弟子遍布江湖', url: 'https://jd.3116598.xyz/home/', icon: '🧘' },
+                { id: 20, category: 'friends', title: '乐哥主页', desc: '乐哥传媒创始人，"七日"神话创造者', url: 'https://乐哥.xyz', icon: '👙' },
+                { id: 21, category: 'friends', title: '少爷主页', desc: '破解高手，无敌凯少爷', url: 'https://link3.cc/vipv8', icon: '🍁' },
+                { id: 22, category: 'friends', title: '公子主页', desc: '刘姓公子，风度翩翩', url: 'https://link3.cc/lzoq/', icon: '🚵' },
+
+                // ===== 代码仓库 =====
+                { id: 23, category: 'repo', title: 'GitHub', desc: '全球最大的代码托管平台', url: 'https://github.com/', icon: '🐙' },
+                { id: 24, category: 'repo', title: 'Gitee', desc: '开源中国推出的代码托管平台', url: 'https://gitee.com/', icon: '🇨🇳' },
+                { id: 25, category: 'repo', title: '极狐GitLab', desc: '稳定速度快，个人私用托管足够', url: 'https://jihulab.com', icon: '🦊' },
+                { id: 26, category: 'repo', title: '凯速网', desc: 'Ksust - 优质的网络服务提供商', url: 'https://my.ksust.com/kstore.htm?aff=11850', icon: '⚡' },
+
+                // ===== 服务器与域名 =====
+                { id: 27, category: 'host', title: 'serv00', desc: '免费主机、无限流量、注册看命', url: 'https://www.serv00.com/', icon: '🆓' },
+                { id: 28, category: 'host', title: 'InfinityFree', desc: '提供永久免费网站托管服务', url: 'https://www.infinityfree.com/', icon: '♾️' },
+                { id: 29, category: 'host', title: '越南服', desc: '免费主机、每月20GB流量', url: 'https://my.dataonline.vn/', icon: '🇻🇳' },
+                { id: 30, category: 'host', title: 'swb.cc', desc: '免费主机、自带域名、无限流量', url: 'https://www.swb.cc/', icon: '🌐' },
+                { id: 31, category: 'host', title: 'HostingEm', desc: '免费主机、自带域名、无限流量', url: 'http://hostingem.ru/', icon: '🏠' },
+                { id: 32, category: 'host', title: 'DigitalPlat', desc: '注册域名、管理域名', url: 'https://dash.domain.digitalplat.org/', icon: '📋' },
+                { id: 33, category: 'host', title: 'CloudFlare', desc: '绑定域名、解析域名', url: 'https://dash.cloudflare.com/login', icon: '☁️' },
+                { id: 34, category: 'host', title: 'Clou DNS', desc: 'CloudFlare 无法解析 DNS 可用这个', url: 'https://www.cloudns.net/', icon: '🌍' },
+                { id: 35, category: 'host', title: 'DNSHE', desc: '如果域名不够、可以考虑下哦', url: 'https://my.dnshe.com/', icon: '📌' },
+
+                // ===== 实用工具与资源 =====
+                { id: 36, category: 'tools', title: '海阔视界', desc: '小棉袄发布地址', url: 'https://haikuo.lanzouq.com/u/GoldRiver', icon: '🌊' },
+                { id: 37, category: 'tools', title: '黄标无限制', desc: '富婆发布地址', url: 'https://github.com/yuanwangokk-1/Hiker-App', icon: '💛' },
+                { id: 38, category: 'tools', title: 'MT管理器', desc: 'Android 文件管理 & 逆向修改神器', url: 'https://mt2.cn/', icon: '📂' },
+                { id: 39, category: 'tools', title: 'MT论坛', desc: 'MT管理器官方学习交流分享网站', url: 'https://bbs.binmt.cc/', icon: '💬' },
+                { id: 40, category: 'tools', title: '影视TV 开源', desc: 'FongMI开发，简洁强大的播放器', url: 'https://github.com/FongMi/TV', icon: '📺' },
+                { id: 41, category: 'tools', title: 'OK影视', desc: '原版 ok 影视壳', url: 'https://drive.uc.cn/s/e7b5fd4698704?public=1', icon: '✅' },
+                { id: 42, category: 'tools', title: '俊于 开源仓库', desc: 'Tvbox源码加更，延续官仓风格', url: 'https://github.com/q215613905/TVBoxOS', icon: '👨‍💻' },
+                { id: 43, category: 'tools', title: 'takagen99 仓库', desc: '基于Tvbox官仓，美化UI支持webdav', url: 'https://github.com/takagen99/Box', icon: '🎨' },
+                { id: 44, category: 'tools', title: '影视仓 发布', desc: 'Tvbox二开，支持多仓订阅投屏', url: 'https://pd.qq.com/s/208da3cbs', icon: '🏪' },
+                { id: 45, category: 'tools', title: 'caiys🥬TV', desc: '免费的在线视频搜索平台', url: 'https://caiys.netlify.app/', icon: '🍅' },
+                { id: 46, category: 'tools', title: 'EasyBox', desc: '网站内容快速搜索神器!', url: 'https://www.easybox.pro/', icon: '📦' },
+                { id: 47, category: 'tools', title: '影用仓库', desc: '你值得拥有', url: 'https://jkss.com/index.html', icon: '🗂️' },
+                { id: 48, category: 'tools', title: '道长DRPY', desc: '可直接用于影视TV和TVbox', url: 'https://github.com/hjdhnx/dr_py', icon: '🧙' },
+                { id: 49, category: 'tools', title: '在线扒站', desc: '轻点扒、会扒光', url: 'https://bazhan.net/', icon: '🕸️' },
+                { id: 50, category: 'tools', title: '🐔鸡语', desc: '咯咯哒加解密', url: 'https://tool.caoniang.com/jiyu', icon: '🐔' },
+                { id: 51, category: 'tools', title: '🐸蛙蛙工具', desc: '咕呱咕呱', url: 'https://www.iamwawa.cn/', icon: '🐸' },
+                { id: 52, category: 'tools', title: '㊙️传说工具', desc: '不要迷恋哥、哥只是一个传说', url: 'http://新浪.网.hz.cz/api/', icon: '🔮' },
+                { id: 53, category: 'tools', title: '太短', desc: '缩短链接，屌！也不是很短~', url: 'https://xiaomark.com/', icon: '✂️' },
+                { id: 54, category: 'tools', title: '太快', desc: 'GitHub 文件加速', url: 'https://gh.xxooo.cf/', icon: '🚀' },
+                { id: 55, category: 'tools', title: '宝塔', desc: 'BT.CN 服务器面板', url: 'https://www.bt.cn/new/index.html', icon: '🗼' },
+                { id: 56, category: 'tools', title: '黑域基地', desc: 'Hybase', url: 'https://m.hybase.com/', icon: '🕶️' },
+                { id: 57, category: 'tools', title: '独角鲸', desc: 'VPS', url: 'https://fuckip.me/', icon: '🐋' },
+                { id: 58, category: 'tools', title: '下次一定', desc: '只为白嫖', url: 'https://www.iiice.cn/#/', icon: '👀' },
+                { id: 59, category: 'tools', title: 'IPTV 直播源', desc: '直播源', url: 'https://jiandantv.com', icon: '📡' },
+                { id: 60, category: 'tools', title: '瓜子', desc: '官方下载地址', url: 'http://gz857.com/', icon: '🥜' },
+                { id: 61, category: 'tools', title: '网飞猫', desc: '一起看更好的世界', url: 'https://dl.ncat21.com/', icon: '🐱' },
+                { id: 62, category: 'tools', title: '影视森林', desc: '观影第一站', url: 'http://www.549.tv/?ref=www.zjnav.com/', icon: '🌳' },
+                { id: 63, category: 'tools', title: '诺影导航', desc: '让观影更畅快', url: 'https://nuoin.com/', icon: '🧭' },
+                { id: 64, category: 'tools', title: '全都有资源站', desc: '各种模板', url: 'https://www.douyouvip.com/', icon: '🎁' },
+                { id: 65, category: 'tools', title: 'Netlify', desc: '静态网站托管服务平台', url: 'https://www.netlify.com/', icon: '⚙️' },
+                { id: 66, category: 'tools', title: '深度科技', desc: '深度，值得深入', url: 'https://www.deepinghost.com/', icon: '🧊' },
+                { id: 67, category: 'tools', title: 'U深度', desc: '新一代U盘启动盘制作工具', url: 'http://ushendu.ycouqim.cn/', icon: '💾' },
+                { id: 68, category: 'tools', title: '老毛桃', desc: 'U盘启动盘制作工具', url: 'https://www.laomaotao.net/', icon: '🍑' },
+                { id: 69, category: 'tools', title: 'Linux论坛', desc: '非常活跃、新潮的社区', url: 'https://linux.do/', icon: '🐧' },
+                { id: 70, category: 'tools', title: '采集资源', desc: '影视站长技术交流圈', url: 'https://www.yszzq.com/', icon: '📚' },
+                { id: 71, category: 'tools', title: '直播源格式转换', desc: '直播源格式在线转换工具', url: 'https://guihet.com/tvlistconvert.html#zbyjg', icon: '🔄' },
+            ];
+
+            // 分类配置
+            const CATEGORIES = [
+                { key: 'all', label: '🏠 全部' },
+                { key: 'tvbox', label: '📺 TVbox接口' },
+                { key: 'friends', label: '🤝 友情链接' },
+                { key: 'repo', label: '📦 代码仓库' },
+                { key: 'host', label: '🌍 服务器域名' },
+                { key: 'tools', label: '🔧 实用工具' },
+            ];
+
+            // DOM refs
+            const $ = s => document.querySelector(s);
+            const content = $('#content');
+            const status = $('#status');
+            const tabs = $('#tabs');
+            const countSpan = $('#countDisplay');
+            const detailSheet = $('#detailSheet');
+            const detailPanel = $('#detailPanel');
+            const detailContent = $('#detailContent');
+            const closeDetailBtn = $('#closeDetail');
+            const searchForm = $('#searchForm');
+            const kwInput = $('#kw');
+            const toast = $('#toast');
+
+            let currentCategory = 'all';
+            let currentData = [...DATA];
+            let toastTimer = null;
+
+            function showToast(msg) {
+                toast.textContent = msg;
+                toast.classList.add('show');
+                clearTimeout(toastTimer);
+                toastTimer = setTimeout(() => toast.classList.remove('show'), 2500);
+            }
+
+            function copyText(text) {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(text).then(() => {
+                        showToast('✅ 复制成功：' + text);
+                    }).catch(() => {
+                        fallbackCopy(text);
+                    });
+                } else {
+                    fallbackCopy(text);
+                }
+            }
+
+            function fallbackCopy(text) {
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                document.body.appendChild(ta);
+                ta.select();
+                try {
+                    document.execCommand('copy');
+                    showToast('✅ 复制成功：' + text);
+                } catch (e) {
+                    showToast('❌ 复制失败，请手动复制');
+                }
+                document.body.removeChild(ta);
+            }
+
+            // 渲染分类标签
+            function renderTabs() {
+                tabs.innerHTML = CATEGORIES.map(cat =>
+                    `<button class="tab focusable ${cat.key === currentCategory ? 'active' : ''}" data-key="${cat.key}">${cat.label}</button>`
+                ).join('');
+                tabs.querySelectorAll('.tab').forEach(btn => {
+                    btn.onclick = () => {
+                        currentCategory = btn.dataset.key;
+                        renderTabs();
+                        renderCards();
+                    };
+                });
+            }
+
+            // 渲染卡片
+            function renderCards() {
+                const kw = kwInput.value.trim().toLowerCase();
+                let filtered = DATA.filter(item => {
+                    const matchCat = currentCategory === 'all' || item.category === currentCategory;
+                    const matchKw = !kw || item.title.includes(kw) || item.desc.includes(kw) || item.url.includes(kw);
+                    return matchCat && matchKw;
+                });
+
+                currentData = filtered;
+                countSpan.textContent = filtered.length;
+
+                if (filtered.length === 0) {
+                    content.innerHTML = `<div class="empty">😅 没有找到匹配的资源，试试其他关键词吧</div>`;
+                    return;
+                }
+
+                // 按分类分组显示（保持类似飞快的section风格）
+                const groups = {};
+                filtered.forEach(item => {
+                    if (!groups[item.category]) groups[item.category] = [];
+                    groups[item.category].push(item);
+                });
+
+                const catLabels = {
+                    'tvbox': '📺 TVbox 接口',
+                    'friends': '🤝 友情链接',
+                    'repo': '📦 代码仓库',
+                    'host': '🌍 服务器与域名',
+                    'tools': '🔧 实用工具'
+                };
+
+                let html = '';
+                for (const [cat, items] of Object.entries(groups)) {
+                    html += `<section class="section"><div class="section-title"><h2>${catLabels[cat] || cat}</h2><span style="font-size:12px;color:var(--muted)">${items.length} 项</span></div><div class="grid">`;
+                    items.forEach(item => {
+                        html += `
+                            <article class="card focusable" tabindex="0" data-id="${item.id}">
+                                <div class="name">
+                                    <span class="icon-box">${item.icon || '🔗'}</span>
+                                    ${item.title}
+                                    ${item.category === 'tvbox' ? '<span class="tag">接口</span>' : ''}
+                                </div>
+                                <div class="remark">${item.desc}</div>
+                            </article>
+                        `;
+                    });
+                    html += `</div></section>`;
+                }
+                content.innerHTML = html;
+
+                // 绑定点击事件
+                content.querySelectorAll('.card').forEach(card => {
+                    card.onclick = () => {
+                        const id = parseInt(card.dataset.id);
+                        const item = DATA.find(d => d.id === id);
+                        if (item) openDetail(item);
+                    };
+                    card.onkeydown = e => { if (e.key === 'Enter') card.click(); };
+                });
+            }
+
+            // 打开详情弹窗
+            function openDetail(item) {
+                document.body.style.overflow = 'hidden';
+                detailSheet.classList.add('active');
+
+                const isTvbox = item.category === 'tvbox';
+                const displayUrl = item.url.length > 50 ? item.url.slice(0, 50) + '…' : item.url;
+
+                detailContent.innerHTML = `
+                    <div class="detail-title">${item.icon || '🔗'} ${item.title}</div>
+                    <div class="detail-desc">${item.desc}</div>
+                    <div style="background:rgba(255,255,255,.05);padding:10px 14px;border-radius:12px;word-break:break-all;font-size:13px;color:var(--muted);margin-bottom:16px;">
+                        📍 ${displayUrl}
+                    </div>
+                    <div class="detail-actions">
+                        ${isTvbox ? `
+                            <button class="btn copy-btn" id="detailCopyBtn">📋 复制接口地址</button>
+                            <a href="${item.url}" target="_blank" rel="noopener" class="btn primary">🔗 打开链接</a>
+                        ` : `
+                            <a href="${item.url}" target="_blank" rel="noopener" class="btn primary" style="flex:2;">🔗 访问站点</a>
+                            <button class="btn copy-btn" id="detailCopyBtn">📋 复制链接</button>
+                        `}
+                    </div>
+                `;
+
+                // 复制按钮逻辑
+                const copyBtn = document.getElementById('detailCopyBtn');
+                if (copyBtn) {
+                    copyBtn.onclick = (e) => {
+                        e.stopPropagation();
+                        copyText(item.url);
+                    };
+                }
+
+                // 关闭按钮
+                closeDetailBtn.onclick = closeDetail;
+                // 点击背景关闭
+                detailSheet.onclick = (e) => {
+                    if (e.target === detailSheet) closeDetail();
+                };
+                // ESC 关闭
+                document.addEventListener('keydown', handleEsc);
+            }
+
+            function closeDetail() {
+                document.body.style.overflow = '';
+                detailSheet.classList.remove('active');
+                document.removeEventListener('keydown', handleEsc);
+            }
+
+            function handleEsc(e) {
+                if (e.key === 'Escape') closeDetail();
+            }
+
+            // 搜索提交
+            function handleSearch(e) {
+                e.preventDefault();
+                renderCards();
+            }
+
+            // 初始化
+            function init() {
+                renderTabs();
+                renderCards();
+                searchForm.onsubmit = handleSearch;
+                kwInput.oninput = () => renderCards(); // 实时搜索
+                status.textContent = `✨ 共 ${DATA.length} 个资源`;
+                countSpan.textContent = DATA.length;
+
+                // 键盘全局 ESC
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && detailSheet.classList.contains('active')) {
+                        closeDetail();
+                    }
+                });
+            }
+
+            init();
+
+        })();
+    </script>
+</body>
+
+</html>

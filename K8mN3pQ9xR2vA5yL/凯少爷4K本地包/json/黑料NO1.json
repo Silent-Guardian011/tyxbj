@@ -1,0 +1,23 @@
+{
+                "请求头": "User-Agent$MOBILE_UA",
+                "编码": "UTF-8",
+                "二次截取": "演员大全--演员大全&&</main>||片商大全--片商大全&&</main>",
+                "数组": "p:div.list a||热门搜索--/search&&/a>||演员大全--/type&&/a>||片商大全--/type&&/a>",
+                "标题": "p:->title||热门搜索-->&&<||演员大全--title=\"&&\"[不包含:国#网#精#大#番#热#特]||片商大全--title=\"&&\"[不包含:国#网#精#大#番#热#特]",
+                "图片": "p:img->src||热门搜索--https://diyiheiliao7643432.buzz/static/images/vod/new6.jpg||演员大全--src=\"&&\"||片商大全--src=\"&&\"",
+                "副标题": "p:span.time->text||热门搜索--||演员大全--color:red;\">&&<||片商大全--color:red;\">&&</a>",
+                "链接": "p:->href||热门搜索--/search/+/&&\"||演员大全--/type/+/&&\"||片商大全--/type/+/&&\"",
+                "二级目录": "热门搜索|folder-0-0-H#演员大全|folder-0-0-H#片商大全|folder-0-0-H",
+                "特殊分类链接": "热门搜索$https://diyiheiliao7643432.buzz/{cateId}.html#演员大全$https://diyiheiliao7643432.buzz/{cateId}.html#片商大全$https://diyiheiliao7643432.buzz/{cateId}.html",
+                "线路数组": "p:h1.text",
+                "线路标题": "VIP尊享",
+                "播放数组": "p:div.panel",
+                "播放列表": "p:button",
+                "播放标题": "p:->text",
+                "播放链接": "p:->href",
+                "搜索模式": "1",
+                "搜索url": "https://diyiheiliao7643432.buzz/video/search/{wd}/n/{pg}.html",
+                "分类": "国产传媒$video/type/956#网曝黑料$video/type/441#精品资源$video/type/822#大众精品$video/type/910#番号大全$video/type/911#热门视频$video/type/912#精品仓库$video/type/914#特色资源$video/type/959#热门搜索$scheme#演员大全$actor#片商大全$studio#",
+                "分类url": "https://diyiheiliao7643432.buzz/{cateId}/{catePg}.html"
+            }
+        

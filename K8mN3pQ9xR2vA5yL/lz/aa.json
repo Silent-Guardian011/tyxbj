@@ -1,0 +1,613 @@
+{
+      "spider": "./pro新.jar",
+      "wallpaper": "https://tuapi.eees.cc/api.php?category=fengjing&type=302",
+      "sites": [
+            {
+                  "key": "独播库",
+                  "name": "🟢Peek影视首页",
+                  "type": 3,
+                  "api": "./lib/js/peekpili.js",
+                  "searchable": 1,
+                  "filterable": 1,
+                  "switchable": 1
+            },
+            {
+                  "key": "switch-config",
+                  "name": "🔄切到增强包",
+                  "type": 4,
+                  "api": "http://127.0.0.1:9980/start.php?mode=switch-config"
+            },
+            {
+                  "key": "🖱️本地服务管理",
+                  "name": "🖱️本地服务管理",
+                  "type": 3,
+                  "api": "csp_ProxySpider",
+                  "ext": "ServerManager"
+            },
+            {
+                  "key": "💻网页工具",
+                  "name": "💻网页工具",
+                  "type": 3,
+                  "api": "csp_ProxySpider",
+                  "searchable": 1,
+                  "quickSearch": 1,
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "ext": "Yt",
+                  "filterable": 1
+            },
+            {
+                  "key": "⛽油管webjar",
+                  "name": "⛽油管webjar[油哔聚合]",
+                  "type": 3,
+                  "api": "csp_ProxySpider",
+                  "searchable": 1,
+                  "quickSearch": 1,
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "ext": "YoutubeSpider1$$$PL动作片#PL科幻片#PD沙雕穿越#中国动漫#PL小说#PL宝宝巴士#新闻直播#PL动物#PL风光#放松#PD短剧#PL战争剧#萌宝短剧#经典音乐#PL海洋#太空#穿越短剧",
+                  "filterable": 1
+            },
+            {
+                  "key": "⛽油管jar",
+                  "name": "⛽油管jar[油哔聚合]",
+                  "type": 3,
+                  "api": "csp_ProxySpider",
+                  "searchable": 1,
+                  "quickSearch": 1,
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "ext": "YoutubeSpider",
+                  "filterable": 1
+            },
+            {
+                  "key": "⛽油管代理",
+                  "name": "⛽油管代理[油哔聚合]",
+                  "type": 3,
+                  "api": "csp_ProxySpider",
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "ext": "DL",
+                  "changeable": 1
+            },
+            {
+                  "key": "⛽服务器油管go",
+                  "name": "⛽服务器油管go[油哔聚合]",
+                  "type": 4,
+                  "api": "http://127.0.0.1:1988",
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "searchable": 1,
+                  "changeable": 1
+            },
+            {
+                  "key": "🍺哔哩lz",
+                  "name": "🍺哔哩lz[油哔聚合]",
+                  "type": 3,
+                  "api": "csp_ProxySpider",
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "ext": "Bilibili",
+                  "changeable": 1
+            },
+            {
+                  "key": "🍺哔哩go",
+                  "name": "🍺哔哩go[油哔聚合]",
+                  "type": 4,
+                  "api": "http://127.0.0.1:1988/lb?lb=10",
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "changeable": 1
+            },
+            {
+                  "key": "🍺哔哩fm",
+                  "name": "🍺哔哩fm[油哔聚合]",
+                  "type": 3,
+                  "api": "csp_ProxySpider",
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "ext": "Bili$$${\"cookie\":\"\",\"type\":\"沙雕仙逆#沙雕动画#风景#听书#太空#海洋#动物#一口气#综合#音乐#影视\"}",
+                  "changeable": 1
+            },
+            {
+                  "key": "🎧捡的音乐",
+                  "name": "🎧捡的音乐[听读直短]",
+                  "type": 3,
+                  "api": "csp_ProxySpider",
+                  "searchable": 1,
+                  "quickSearch": 1,
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "ext": "Music1",
+                  "filterable": 1
+            },
+            {
+                  "key": "🎧音乐实验",
+                  "name": "🎧音乐实验[听读直短]",
+                  "type": 3,
+                  "api": "csp_ProxySpider",
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "ext": "AiTingSpider",
+                  "changeable": 1
+            },
+            {
+                  "key": "🎧听书go",
+                  "name": "🎧听书go[听读直短]",
+                  "type": 4,
+                  "api": "http://127.0.0.1:1988/lb?lb=11",
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "changeable": 1
+            },
+            {
+                  "key": "🗃️本地数据库",
+                  "name": "🗃️本地数据库",
+                  "type": 3,
+                  "api": "csp_ProxySpider",
+                  "searchable": 1,
+                  "quickSearch": 1,
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "ext": "Sjk",
+                  "filterable": 1
+            },
+            {
+                  "key": "🎥HuyaLive",
+                  "name": "🎥虎牙直播[听读直短]",
+                  "type": 3,
+                  "api": "csp_ProxySpider",
+                  "searchable": 0,
+                  "quickSearch": 0,
+                  "filterable": 0,
+                  "ext": "HuyaLive"
+            },
+            {
+                  "key": "🧰黄绿采集",
+                  "name": "🧰黄绿采集[油哔聚合]",
+                  "type": 3,
+                  "api": "csp_ProxySpider",
+                  "ext": "CJJH$$$0",
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "changeable": 1
+            },
+            {
+                  "key": "📱PTT",
+                  "name": "📱PTT[听读直短]",
+                  "type": 3,
+                  "api": "csp_ProxySpider",
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "ext": "PTT",
+                  "changeable": 1
+            },
+            {
+                  "key": "📱短剧",
+                  "name": "📱短剧[听读直短]",
+                  "type": 4,
+                  "api": "http://127.0.0.1:1988/lb?lb=2",
+                  "searchable": 1,
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "changeable": 1
+            },
+            {
+                  "key": "📚三三小说",
+                  "name": "📚三三小说[听读直短]",
+                  "type": 3,
+                  "api": "csp_ProxySpider",
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "ext": "SanSanNovel",
+                  "changeable": 1
+            },
+            {
+                  "key": "📚七猫小说",
+                  "name": "📚七猫小说[听读直短]",
+                  "type": 3,
+                  "api": "csp_ProxySpider",
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "ext": "NovelReader",
+                  "changeable": 1
+            },
+            {
+                  "key": "📚阅读助手",
+                  "name": "📚阅读助手[听读直短]",
+                  "type": 3,
+                  "api": "csp_ProxySpider",
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "ext": "ReaderHelper",
+                  "changeable": 1
+            },
+            {
+                  "key": "📚本地小说",
+                  "name": "📚本地小说[听读直短]",
+                  "type": 3,
+                  "api": "csp_ProxySpider",
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "ext": "NovelBd",
+                  "changeable": 1
+            },
+            {
+                  "key": "📡数据暴露",
+                  "name": "📡数据暴露peek勿用",
+                  "type": 4,
+                  "api": "http://127.0.0.1:1988/lb?lb=16",
+                  "style": {
+                        "type": "rect",
+                        "ratio": 1.33
+                  },
+                  "changeable": 1
+            }
+      ],
+      "headers": [
+            {
+                  "host": "mgtv.ottiptv.cc",
+                  "header": {
+                        "User-Agent": "okHttp/Mod-1.4.0.0",
+                        "Referer": "https://mgtv.ottiptv.cc/"
+                  }
+            }
+      ],
+      "parses": [
+            {
+                  "name": "JSON并发",
+                  "url": "http://localhost:5757/parse/JSON并发?url=",
+                  "type": 2,
+                  "ext": {
+                        "flag": [
+                              "qiyi",
+                              "imgo",
+                              "爱奇艺",
+                              "奇艺",
+                              "qq",
+                              "qq 预告及花絮",
+                              "腾讯",
+                              "youku",
+                              "优酷",
+                              "pptv",
+                              "PPTV",
+                              "letv",
+                              "乐视",
+                              "leshi",
+                              "mgtv",
+                              "芒果",
+                              "sohu",
+                              "xigua",
+                              "fun",
+                              "风行"
+                        ]
+                  },
+                  "header": {
+                        "User-Agent": "Mozilla/5.0"
+                  }
+            },
+            {
+                  "name": "JSON合集",
+                  "url": "http://localhost:5757/parse/JSON合集?url=",
+                  "type": 3,
+                  "ext": {
+                        "flag": [
+                              "qiyi",
+                              "imgo",
+                              "爱奇艺",
+                              "奇艺",
+                              "qq",
+                              "qq 预告及花絮",
+                              "腾讯",
+                              "youku",
+                              "优酷",
+                              "pptv",
+                              "PPTV",
+                              "letv",
+                              "乐视",
+                              "leshi",
+                              "mgtv",
+                              "芒果",
+                              "sohu",
+                              "xigua",
+                              "fun",
+                              "风行"
+                        ]
+                  },
+                  "header": {
+                        "User-Agent": "Mozilla/5.0"
+                  }
+            },
+            {
+                  "name": "虾米",
+                  "url": "http://localhost:5757/parse/虾米?url=",
+                  "type": 1,
+                  "ext": {
+                        "flag": [
+                              "qiyi",
+                              "imgo",
+                              "爱奇艺",
+                              "奇艺",
+                              "qq",
+                              "qq 预告及花絮",
+                              "腾讯",
+                              "youku",
+                              "优酷",
+                              "pptv",
+                              "PPTV",
+                              "letv",
+                              "乐视",
+                              "leshi",
+                              "mgtv",
+                              "芒果",
+                              "sohu",
+                              "xigua",
+                              "fun",
+                              "风行"
+                        ]
+                  },
+                  "header": {
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36",
+                        "Referer": "https://jx.xmflv.com"
+                  }
+            },
+            {
+                  "name": "json1",
+                  "url": "http://localhost:5757/parse/json1?url=",
+                  "type": 1,
+                  "ext": {
+                        "flag": [
+                              "qiyi",
+                              "imgo",
+                              "爱奇艺",
+                              "奇艺",
+                              "qq",
+                              "qq 预告及花絮",
+                              "腾讯",
+                              "youku",
+                              "优酷"
+                        ]
+                  },
+                  "header": {
+                        "User-Agent": "Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36"
+                  }
+            },
+            {
+                  "name": "web1",
+                  "url": "https://www.ckplayer.vip/jiexi/?url=",
+                  "type": 0,
+                  "ext": {
+                        "flag": [
+                              "qiyi",
+                              "imgo",
+                              "爱奇艺",
+                              "奇艺",
+                              "qq",
+                              "qq 预告及花絮",
+                              "腾讯",
+                              "youku",
+                              "优酷"
+                        ]
+                  },
+                  "header": {
+                        "User-Agent": "Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36"
+                  }
+            },
+            {
+                  "name": "J1",
+                  "url": "https://zy.qiaoji8.com/gouzi.php?url=",
+                  "type": 1,
+                  "header": {
+                        "User-Agent": "Mozilla/5.0"
+                  }
+            },
+            {
+                  "name": "J2",
+                  "url": "https://jxjson.icu/neibu.php?url=",
+                  "type": 1,
+                  "header": {
+                        "User-Agent": "Mozilla/5.0"
+                  }
+            },
+            {
+                  "name": "J芒果4k",
+                  "url": "http://mg.itufm.top/mg.php?url=",
+                  "type": 1,
+                  "header": {
+                        "User-Agent": "Mozilla/5.0"
+                  }
+            },
+            {
+                  "name": "W花旗",
+                  "url": "https://www.huaqi.live/?url=",
+                  "type": 0,
+                  "header": {
+                        "User-Agent": "Mozilla/5.0"
+                  }
+            },
+            {
+                  "name": "W冰豆",
+                  "url": "https://bd.jx.cn/?url=",
+                  "type": 0,
+                  "header": {
+                        "User-Agent": "Mozilla/5.0"
+                  }
+            },
+            {
+                  "name": "W盘古",
+                  "url": "https://www.playm3u8.cn/jiexi.php?url=",
+                  "type": 0,
+                  "header": {
+                        "User-Agent": "Mozilla/5.0"
+                  }
+            },
+            {
+                  "name": "W1",
+                  "url": "https://jx.xymp4.cc/?url=",
+                  "type": 0,
+                  "header": {
+                        "User-Agent": "Mozilla/5.0"
+                  }
+            },
+            {
+                  "name": "W11",
+                  "url": "https://www.ckplayer.vip/jiexi/?url=",
+                  "type": 0,
+                  "header": {
+                        "User-Agent": "Mozilla/5.0"
+                  }
+            },
+            {
+                  "name": "295关姐",
+                  "url": "http://localhost:5759/295yun.php?url=",
+                  "type": 1,
+                  "header": {
+                        "User-Agent": "Mozilla/5.0"
+                  }
+            },
+            {
+                  "name": "腾讯关姐",
+                  "url": "http://localhost:5759/tencent.php/?url=",
+                  "type": 1,
+                  "header": {
+                        "User-Agent": "Mozilla/5.0"
+                  }
+            },
+            {
+                  "name": "HGvip",
+                  "url": "http://1.94.221.189:88/algorithm.php?url=",
+                  "type": 1,
+                  "header": {
+                        "User-Agent": "Mozilla/5.0"
+                  }
+            }
+      ],
+      "flags": [
+            "youku",
+            "tudou",
+            "qq",
+            "qiyi",
+            "iqiyi",
+            "leshi",
+            "letv",
+            "sohu",
+            "imgo",
+            "mgtv",
+            "bilibili",
+            "pptv",
+            "PPTV",
+            "migu"
+      ],
+      "doh": [
+            {
+                  "name": "Google",
+                  "url": "https://dns.google/dns-query",
+                  "ips": [
+                        "8.8.4.4",
+                        "8.8.8.8"
+                  ]
+            },
+            {
+                  "name": "Cloudflare",
+                  "url": "https://cloudflare-dns.com/dns-query",
+                  "ips": [
+                        "1.1.1.1",
+                        "1.0.0.1",
+                        "2606:4700:4700::1111",
+                        "2606:4700:4700::1001"
+                  ]
+            },
+            {
+                  "name": "AdGuard",
+                  "url": "https://dns.adguard.com/dns-query",
+                  "ips": [
+                        "94.140.14.140",
+                        "94.140.14.141"
+                  ]
+            },
+            {
+                  "name": "DNSWatch",
+                  "url": "https://resolver2.dns.watch/dns-query",
+                  "ips": [
+                        "84.200.69.80",
+                        "84.200.70.40"
+                  ]
+            },
+            {
+                  "name": "Quad9",
+                  "url": "https://dns.quad9.net/dns-query",
+                  "ips": [
+                        "9.9.9.9",
+                        "149.112.112.112"
+                  ]
+            }
+      ],
+      "lives": [
+            {
+                  "name": "MY live-catvod",
+                  "type": "0",
+                  "ua": "okhttp/3.15",
+                  "url": "https://live.catvod.com/tv.m3u"
+            },
+            {
+                  "name": "MY live-catvod-local",
+                  "type": "0",
+                  "ua": "okhttp/3.15",
+                  "url": "http://127.0.0.1:9978/file/lives/Live-catvod.txt"
+            },
+            {
+                  "name": "MQiTV",
+                  "api": "csp_MQiTV",
+                  "jar": "https://slink.ltd/https://raw.githubusercontent.com/sqspot/tac/refs/heads/main/jar/fmMQiTV.jar",
+                  "ext": "https://59.125.210.231:4433",
+                  "playerType": 1,
+                  "epg": "http://epg.112114.xyz/?ch={name}&date={date}"
+            },
+            {
+                  "name": "肥羊国内直播",
+                  "type": 3,
+                  "api": "csp_Feiyang",
+                  "url": "tv.m3u",
+                  "ext": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/lystv/fmapp/ok/apk/allinone/v7/allinone;md5;https://mirror.ghproxy.com/https://raw.githubusercontent.com/lystv/fmapp/ok/apk/allinone/v7/md5",
+                  "jar": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/jar/custom_spider.jar"
+            }
+      ]
+}

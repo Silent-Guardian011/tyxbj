@@ -1,0 +1,82 @@
+{
+"log": {
+"enabled": true,
+"level": "debug",
+"dir": "/storage/emulated/0/123云盘/转本地包/本地包/log"
+},
+"下载目录": "/storage/emulated/0/123云盘/转本地包/本地包",
+"urls": [
+{
+"name": "海豚",
+"url": "https://gh-proxy.com/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/Web鱼壳海豚常规23",
+"enabled": true
+},
+{
+"name": "飞飞",
+"url": "https://jk.catvod.site/",
+"enabled": true
+}
+],
+"download": {
+"跳过扩展名": [
+".php",
+".asp",
+".jsp",
+".cgi",
+".exe",
+".dll",
+".sh",
+".bat"
+],
+"跳过模式": [
+"广告",
+"test",
+"temp"
+],
+"最大文件大小MB": 100,
+"递归深度": 2,
+"解密": {
+"启用": false,
+"外部API地址": "https://xn--v4q818bf34b.cc/helper/api.php"
+},
+"覆盖": true,
+"连接超时": 10,
+"读取超时": 60,
+"块大小": 8192,
+"max_workers": 8,
+"retry_total": 2,
+"retry_backoff": 0.3,
+"pool_connections": 10,
+"pool_maxsize": 20,
+"全局代理": "",
+"并发数": 3,
+"user_agent": "okhttp/4.12.0",
+"category_map": {
+"js": ".js",
+"lib": ".json",
+"py": ".py",
+"jar": ".jar"
+},
+"skip_patterns_core": [
+"/api\\.php/provide/vod",
+"/api\\.php/app/",
+"provide/vod",
+"\\?url=",
+"\\{name\\}",
+"\\{date\\}",
+"\\{episode\\}",
+"proxy://"
+]
+},
+"github_proxy": "https://gh-proxy.com/",
+"github_proxy_patterns": [
+"https?://gh-proxy\\.com/",
+"https?://ghproxy\\.net/",
+"https?://ghfast\\.top/",
+"https?://ghproxy\\.cc/",
+"https?://mirror\\.ghproxy\\.com/",
+"https?://gh\\.jasonzeng\\.dev/",
+"https?://fastgit\\.cc/",
+"https?://raw\\.githubusercontent\\.com/"
+]
+}

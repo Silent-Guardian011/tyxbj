@@ -1,0 +1,17 @@
+{
+    "作者": "h",
+    "站名": "xtwitter同性",
+    "请求头": "User-Agent$MOBILE_UA",
+    "编码": "UTF-8",
+	"主页url": "https://gay-bros.com/",
+	"数组": "<div class=\"relative overflow-hidden\">&&class=\"count-item flex items-center cursor-pointer",
+	"标题": "<div class=\"absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded-lg\">&&</div>",
+	"副标题": "class=\"m-1 w-5 h-5 dark:invert\">&&</span>",
+    "图片": "https://gay-bros.com/_next/image?url=+srcSet=\"/_next/image?url=&&.jpg+.jpg&w=640&q=60",
+	"链接": "href=\"&&\"",
+    "直接播放": "1",
+    "跳转播放链接": "\"contentUrl\":\"&&\",",
+    "分类url": "https://gay-bros.com/zh-CN/{cateId}?sort={by}&page={catePg}",
+    "分类": "每月$monthly#所有$all",
+    "排序": "点赞$favorite#观看$pv#时长$time#最近添加$created"
+}

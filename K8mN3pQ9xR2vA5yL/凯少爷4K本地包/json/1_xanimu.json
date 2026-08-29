@@ -1,0 +1,21 @@
+{
+    "作者": "h",
+    "站名": "xanimu",
+    "请求头": "User-Agent@Mozilla/5.0 (Linux；； Android 16；； 2407FRK8EC Build/BP2A.250605.031.A3) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/137.0.7151.115 Mobile Safari/537.36",
+    "主页url": "https://xanimu.mom/zh-CN/",
+    "二次截取": "",
+    "数组": "<div class=\" col-6 col-md-3 col-lg-3 col-xl-2\">&&<span class=\"notranslate rating\">||分类--<div class=\"col-6 col-md-3 col-lg-3 col-xl-2\">&&div>||人物--<div class=\"col-6 col-md-3 col-lg-3 col-xl-2\">&&div>||标签--<div class=\"tag-item ppopp\">&&</div>",
+    "标题": "<span class=\"title\">&&</span>||分类--title=\"&&\"||人物--title=\"&&\"||标签--title=\"查看所有 &&\"",
+    "图片": "data-src=\"&&\"||分类--src=\"&&\"||人物--src=\"&&\"",
+    "副标题": "<i class=\"fa fa-eye\"></i>&&</span>||分类--<div class=\"video-datas-category-count\">&&</||人物--<div class=\"video-datas-category-count\">&&</||标签--\">&&</a>",
+    "链接": "href=\"&&\"||分类--href=\"&&\"+%E6%9C%89%E5%85%B3%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%EF%BC%8C%E8%AF%B7%E6%9F%A5%E7%9C%8B%E6%AD%A4%E9%A1%B5%E9%9D%A2%E3%80%82/{catePg}/||人物--https://xanimu.mom/zh-CN/%E6%BC%94%E5%91%98/+actors=&&\"+%E6%9C%89%E5%85%B3%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%EF%BC%8C%E8%AF%B7%E6%9F%A5%E7%9C%8B%E6%AD%A4%E9%A1%B5%E9%9D%A2%E3%80%82/{catePg}/||标签--<a href=\"&&\"+%E6%9C%89%E5%85%B3%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%EF%BC%8C%E8%AF%B7%E6%9F%A5%E7%9C%8B%E6%AD%A4%E9%A1%B5%E9%9D%A2%E3%80%82/{catePg}/",
+    "嗅探词": ".mp4#.m3u8",
+    "跳转播放链接": "<source src=\"&&\"",
+    "搜索模式": "1",
+    "搜索url": "https://xanimu.mom/zh-CN/%E6%9C%89%E5%85%B3%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%EF%BC%8C%E8%AF%B7%E6%9F%A5%E7%9C%8B%E6%AD%A4%E9%A1%B5%E9%9D%A2%E3%80%82/{pg}/?s={wd}",
+    "二级目录": "分类,人物,标签|folder-0-0-H",
+    "二级ID": "",
+    "特殊分类链接": "分类$https://xanimu.mom/zh-CN/%E7%B1%BB%E5%88%AB/#人物$https://xanimu.mom/zh-CN/4875-%E8%A7%86%E9%A2%91%E6%BC%94%E5%91%98/%E6%9C%89%E5%85%B3%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%EF%BC%8C%E8%AF%B7%E6%9F%A5%E7%9C%8B%E6%AD%A4%E9%A1%B5%E9%9D%A2%E3%80%82/{catePg}/#标签$https://xanimu.mom/zh-CN/9%E4%B8%AA%E8%A7%86%E9%A2%91%E6%A0%87%E7%AD%BE/%E6%9C%89%E5%85%B3%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%EF%BC%8C%E8%AF%B7%E6%9F%A5%E7%9C%8B%E6%AD%A4%E9%A1%B5%E9%9D%A2%E3%80%82/{catePg}/",
+    "分类url": "https://xanimu.mom/zh-CN/{cateId}/{catePg}/[https://xanimu.mom/zh-CN/{cateId}/];;z",
+    "分类": "分类$%E7%B1%BB%E5%88%AB#人物$4875-%E8%A7%86%E9%A2%91%E6%BC%94%E5%91%98/%E6%9C%89%E5%85%B3%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%EF%BC%8C%E8%AF%B7%E6%9F%A5%E7%9C%8B%E6%AD%A4%E9%A1%B5%E9%9D%A2%E3%80%82#标签$9%E4%B8%AA%E8%A7%86%E9%A2%91%E6%A0%87%E7%AD%BE/%E6%9C%89%E5%85%B3%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%EF%BC%8C%E8%AF%B7%E6%9F%A5%E7%9C%8B%E6%AD%A4%E9%A1%B5%E9%9D%A2%E3%80%82"
+}

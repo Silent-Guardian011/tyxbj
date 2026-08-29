@@ -1,0 +1,23 @@
+{
+    "作者": "h",
+    "站名": "kissav",
+    "请求头": "User-Agent@Mozilla/5.0 (Linux；； Android 16；； 2407FRK8EC Build/BP2A.250605.031.A3) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/137.0.7151.115 Mobile Safari/537.36",
+    "发布页": "https://kissav.me/",
+    "主页url": "https://165.izdehnmff.cc/",
+    "二次截取": "",
+    "数组": "<div class=\"col-6 col-sm-4 col-lg-3\">&&<div class=\"detail\">||关键词--<div class=\"col-6 col-sm-4 col-lg-3 mb-3\">&&</div>||女优名称,女优热度,女优更新,女优片量<div class=\"col-6 col-sm-4 col-lg-3\">&&</div>",
+    "标题": "alt=\"&&\"||关键词--title=\"&&\"||女优名称,女优热度,女优更新,女优片量--alt=\"&&\"",
+    "图片": "<a href=\"&&\"||女优名称,女优热度,女优更新,女优片量--src=\"&&\"",
+    "副标题": "<span class=\"label\">&&</span>||女优名称,女优热度,女优更新,女优片量--<span>&&</span>",
+    "链接": "<a href=\"&&\"||关键词--href=\"&&\"+page/{catePg}/||女优名称,女优热度,女优更新,女优片量--<a href=\"&&\"+page/{catePg}/",
+    "跳转图片":"\"thumbnailUrl\":*\"&&\"",
+    "跳转播放链接": "",
+    "嗅探词": "",
+    "搜索模式": "1",
+    "搜索url": "https://165.izdehnmff.cc/search/{wd}/page/{pg}/",
+    "二级目录": "关键词,女优名称,女优热度,女优更新,女优片量|folder-0-0-H",
+    "二级ID": "关键词$href=\"/zh-cn/av/tag/&&/update/\"#女优名称$<a href=\"/zh-cn/actor/&&/update/\"#女优热度$<a href=\"/zh-cn/actor/&&/update/\"#女优更新$<a href=\"/zh-cn/actor/&&/update/\"#女优片量$<a href=\"/zh-cn/actor/&&/update/\"",
+    "特殊分类链接": "关键词$https://165.izdehnmff.cc/{cateId}/#女优名称#https://165.izdehnmff.cc/actors/name/page/{catePg}/#女优热度$https://165.izdehnmff.cc/actors/hot/page/{catePg}/#女优更新$https://165.izdehnmff.cc/actors/update/page/{catePg}/#女优片量$https://165.izdehnmff.cc/actors/mostmovies/page/{catePg}/",
+    "分类url": "https://165.izdehnmff.cc/{cateId}/page/{catePg}/;;z",
+    "分类": "新作上市$av/new#东京热门$hotmovies/alwayshot#本月热门$hotmovies/month#本周热门$hotmovies/week#本日热门$hotmovies/today#关键词$av/tag/%e9%bb%91%e4%b8%9d/update#女优名称$actors/name#女优热度$actors/hot#女优更新$actors/update#女优片量$actors/mostmovies"
+}

@@ -1,0 +1,66 @@
+{
+    "spider": "./Lge.jar",//主jar
+    "wallpaper": "http://我不是.摸鱼儿.com/wallpaper/",//壁纸
+    "sites": [
+        {
+            "key": "XX",//唯一名字，不能与其他源名字重复
+            "name": "XX",//随便起名
+            "type": 3,
+            "api": "csp_XYQHiker",//引用主jar
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "changeable": 1,
+            "ext": "./json/XX.json"//引用文件
+        },
+        {
+            "key": "XX",
+            "name": "XX",
+            "type": 3,
+            "api": "csp_XBPQ",
+            "jar": "./jar/XX.jar",//这种就是外挂jar
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "changeable": 1,
+            "ext": "./json/XX.json"
+        },
+        {
+            "key": "XX",
+            "name": "XX",
+            "type": 3,
+            "api": "csp_XBPQ",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "changeable": 1,
+            "ext": {}//不用文件的格式，直接把数据放进括号内
+        },
+        {
+            "key": "XXpy",//py文件的用法
+            "name": "XC",
+            "type": 3,
+            "api": "./py/XX.py",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "changeable": 1
+        },
+        {
+            "key": "XX采集",//采集源
+            "name": "XX采集",
+            "type": 1,
+            "api": "https://XX.com/api.php/provide/vod/",
+            "quickSearch": 1,
+            "searchable": 1,
+            "filterable": 0
+        },
+        {
+            "key": "XXjs",
+            "name": "XX",
+            "type": 3,
+            "api": "./js/drpy2.min.js",//这个是依赖文件，必须用到
+            "ext": "./js/XX.js"
+        }
+    ]
+}

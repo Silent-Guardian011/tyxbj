@@ -1,0 +1,20 @@
+{
+    "作者": "h",
+    "站名": "91吃瓜自动挡",
+    "请求头": "User-Agent@Mozilla/5.0 (Linux；； Android 16；； 2510DRK44C Build/BP2A.250605.031.A3) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/143.0.7499.192 Mobile Safari/537.36",
+    "固定直链": "https://d1j6xn49vzh78j.cloudfront.net/",//自动挡失效请切换此域名
+    "回家的路": "{{域名-c}}homeway.html",//备用勿动
+    "发布页": "{{回家的路}}[工具:源码#91吃瓜最新网址(免翻墙)*<a href=\"截取\"]",//备用勿动
+    "固定直链自动挡": "{{回家的路}}[工具:源码#91吃瓜web固定直连:*<a href=\"截取\"]",//备用勿动
+    "后缀解码": "https://www.bwlwaomzh.com/[工具:源码#document.write(Base64.decode('截取'))#解b64#words.random()*'.截取',]",
+    "域名-c": "https://cnmlgb.{{后缀解码}}/",
+	"直接播放": "1",
+	"搜索模式": "1",
+	"数组": "<meta itemprop=\"url mainEntityOfPage\"&&<div class=\"post-card-info\">",
+	"标题": "itemprop=\"headline\">&&</h2>",
+	"链接": "<a href=\"&&\"",
+	"图片": "loadBannerDirect('&&'",
+	"搜索url": "{{域名-c}}search/{wd}/{pg}/",
+    "分类url": "{{域名-c}}category/{cateId}/{catePg}/",
+    "分类": "今日吃瓜$zxcghl#最高点击$rsdg#必吃大瓜$bcdg#每日大赛$mrds#师生专栏$xsjlb#自拍偷拍$zptp#深夜撸片$lpsd#海角乱伦$hjll#网红黑料$whhl#反差靓女$fclv#91探花$91th#网黄合集$gcwh#明星AI$aikj#明星黑料$mxhl#成人动漫$crdm#擦边短剧$dydj#猎奇重口$lqzk#社会奇闻$qwys"
+}

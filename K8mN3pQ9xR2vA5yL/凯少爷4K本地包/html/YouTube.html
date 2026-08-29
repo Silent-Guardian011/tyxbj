@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>YouTube WebHome 完全体</title>
+    <style>
+        :root {
+            --panel-rgb: 42,50,58;
+            --panel: rgba(var(--panel-rgb),.62);
+            --panel-soft: rgba(var(--panel-rgb),.44);
+            --panel-strong: rgba(var(--panel-rgb),.86);
+            --line: rgba(255,255,255,.16);
+            --text: #f7fbff;
+            --muted: rgba(247,251,255,.68);
+            --accent: #ff0000;
+            --radius: 18px;
+        }
+        * { box-sizing: border-box; }
+        html, body { margin: 0; min-height: 100%; background: #1a1e24; color: var(--text); font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif; }
+        .app { min-height: 100vh; padding: 10px 10px 28px; }
+        .top { padding: 8px 0 10px; }
+        .bar { display: flex; align-items: center; gap: 8px; }
+        .brand { font-size: 21px; font-weight: 900; letter-spacing: .5px; }
+        .brand b { color: var(--accent); }
+        .search { flex: 1; display: flex; gap: 8px; align-items: center; background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.14); border-radius: 999px; padding: 6px 13px; }
+        .search input { flex: 1; background: transparent; border: 0; outline: 0; color: var(--text); font-size: 15px; }
+        button.primary { background: linear-gradient(135deg, #ff0000, #ff5555); color: #fff; font-weight: 800; border: none; }
+        .tabs { display: flex; gap: 8px; overflow-x: auto; padding: 8px 0; scrollbar-width: none; }
+        .tab { white-space: nowrap; padding: 10px 20px; border-radius: 999px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); }
+        .tab.active { background: linear-gradient(135deg, rgba(255,0,0,.6), rgba(255,85,85,.3)); border-color: var(--accent); font-weight: 800; }
+        .status { margin: 8px 4px; color: var(--muted); font-size: 14px; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+        .card { border-radius: 16px; overflow: hidden; background: var(--panel-soft); cursor: pointer; }
+        .poster { aspect-ratio: 16/9; background: #222; }
+        .poster img { width: 100%; height: 100%; object-fit: cover; }
+        .meta { padding: 10px; }
+        .name { font-weight: 800; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .remark { color: var(--muted); font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 4px; }
+        .sheet { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.95); display: none; }
+        .sheet.active { display: block; }
+        .detail-panel { background: var(--panel-strong); margin: 12px; border-radius: 22px; padding: 16px; }
+        .focusable:focus { outline: 3px solid var(--accent); outline-offset: 4px; }
+        @media (min-width: 720px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+        @media (min-width: 1100px) { .grid { grid-template-columns: repeat(5, 1fr); } }
+    </style>
+</head>
+<body>
+<div class="app" id="app">
+    <div class="top">
+        <div class="bar">
+            <div class="brand">YT<b>WebHome</b></div>
+            <form class="search" id="searchForm">
+                <input id="kw" type="text" placeholder="搜索 YouTube 视频..." class="focusable" autocomplete="off"/>
+                <button type="submit" class="primary focusable">搜索</button>
+            </form>
+        </div>
+        <div class="tabs" id="tabs"></div>
+    </div>
+    <div class="status" id="status">初始化中...</div>
+    <main id="content"></main>
+</div>
+
+<div class="sheet" id="detailSheet">
+    <div class="sheet-inner">
+        <div class="detail-panel" id="detailPanel"></div>
+    </div>
+</div>
+
+<script>
+(async function(){
+    'use strict';
+
+    const API_BASE = 'https://www.youtube.com/youtubei/v1';
+    const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36';
+
+    // 更可靠的备用 Key（2026 年常用）
+    let apiKey = 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8';
+    let clientContext = {
+        client: {
+            clientName: "WEB",
+            clientVersion: "2.20250530.01.00",
+            hl: "zh-CN",
+            gl: "US"
+        }
+    };
+
+    const CATS = [
+        ['热门推荐', '/browse', 'FEwhat_to_watch'],
+        ['时下流行', '/browse', 'FEtrending'],
+        ['游戏', '/browse', 'FEgaming'],
+        ['音乐', '/browse', 'FEmusic']
+    ];
+
+    const $ = s => document.querySelector(s);
+
+    async function waitFm() {
+        if (window.fm) return window.fm;
+        return new Promise(r => {
+            document.addEventListener('fmsdk', () => r(window.fm), {once: true});
+            setTimeout(() => r(window.fm || null), 1500);
+        });
+    }
+
+    // 增强版 Key 提取
+    async function initKey(fm) {
+        $('#status').textContent = '获取 YouTube Key...';
+        try {
+            let html = '';
+            if (fm?.req) {
+                const res = await fm.req('https://www.youtube.com', {method: 'GET', responseType: 'text', timeout: 20});
+                html = res.body || '';
+            } else {
+                html = await (await fetch('https://www.youtube.com')).text();
+            }
+
+            // 多种匹配方式
+            let match = html.match(/"INNERTUBE_API_KEY"\s*:\s*"([^"]+)"/);
+            if (match) apiKey = match[1];
+
+            console.log('✅ 当前 API Key:', apiKey);
+        } catch (e) {
+            console.warn('Key 提取失败，使用备用', e);
+        }
+    }
+
+    async function postInnerTube(fm, endpoint, payload) {
+        const url = `${API_BASE}${endpoint}?key=${apiKey}`;
+        const body = JSON.stringify({ context: clientContext, ...payload });
+
+        if (fm?.req) {
+            const res = await fm.req(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'User-Agent': UA,
+                    'X-YouTube-Client-Name': '1',
+                    'X-YouTube-Client-Version': clientContext.client.clientVersion
+                },
+                body: body,
+                responseType: 'json',
+                timeout: 30
+            });
+            return res.body || res;
+        }
+
+        const res = await fetch(url, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: body
+        });
+        return res.json();
+    }
+
+    function filterVideos(data) {
+        const items = [];
+        const scan = (obj) => {
+            if (!obj || typeof obj !== 'object') return;
+            if (obj.videoRenderer?.videoId) {
+                const v = obj.videoRenderer;
+                items.push({
+                    videoId: v.videoId,
+                    title: v.title?.runs?.[0]?.text || v.title?.simpleText || '无标题',
+                    author: v.longBylineText?.runs?.[0]?.text || '',
+                    thumb: v.thumbnail?.thumbnails?.[0]?.url || '',
+                    duration: v.lengthText?.simpleText || ''
+                });
+            }
+            Object.values(obj).forEach(scan);
+        };
+        scan(data);
+        return items;
+    }
+
+    function renderTabs(idx) {
+        $('#tabs').innerHTML = CATS.map(([name], i) => 
+            `<button class="tab focusable ${i===idx?'active':''}" data-idx="${i}">${name}</button>`
+        ).join('');
+        $('#tabs').querySelectorAll('.tab').forEach(btn => {
+            btn.onclick = () => loadCategory(+btn.dataset.idx);
+        });
+    }
+
+    function renderGrid(fm, items) {
+        if (!items || items.length === 0) {
+            $('#content').innerHTML = '<div style="padding:60px;text-align:center;color:var(--muted)">暂无数据，请尝试切换分类或搜索</div>';
+            return;
+        }
+        let html = '<div class="grid">';
+        items.forEach(item => {
+            const img = fm?.res ? fm.res(item.thumb) : item.thumb;
+            html += `
+                <div class="card focusable" data-id="${item.videoId}" data-title="${item.title.replace(/"/g,'&quot;')}">
+                    <div class="poster"><img src="${img}" loading="lazy" referrerpolicy="no-referrer"></div>
+                    <div class="meta">
+                        <div class="name">${item.title}</div>
+                        <div class="remark">${item.author} · ${item.duration}</div>
+                    </div>
+                </div>`;
+        });
+        html += '</div>';
+        $('#content').innerHTML = html;
+
+        $('#content').querySelectorAll('.card').forEach(card => {
+            card.onclick = () => openDetail(card.dataset.id, card.dataset.title);
+        });
+    }
+
+    async function loadCategory(idx) {
+        const fm = await waitFm();
+        $('#status').textContent = '加载中...';
+        renderTabs(idx);
+
+        try {
+            const cat = CATS[idx];
+            const data = await postInnerTube(fm, cat[1], {browseId: cat[2]});
+            renderGrid(fm, filterVideos(data));
+            $('#status').textContent = `已加载 ${filterVideos(data).length} 个视频`;
+        } catch (e) {
+            console.error(e);
+            $('#content').innerHTML = `<div style="padding:40px;color:#ff6666">加载失败: ${e.message}</div>`;
+        }
+    }
+
+    async function doSearch(query) {
+        const fm = await waitFm();
+        $('#status').textContent = '搜索中...';
+        renderTabs(-1);
+
+        try {
+            const data = await postInnerTube(fm, '/search', {query});
+            renderGrid(fm, filterVideos(data));
+            $('#status').textContent = `找到 ${filterVideos(data).length} 个结果`;
+        } catch (e) {
+            $('#content').innerHTML = `<div style="padding:40px;color:#ff6666">搜索失败: ${e.message}</div>`;
+        }
+    }
+
+    function openDetail(videoId, title) {
+        $('#detailSheet').classList.add('active');
+        $('#detailPanel').innerHTML = `
+            <button class="focusable" id="closeBtn" style="margin-bottom:15px;">← 返回</button>
+            <div style="display:grid;grid-template-columns:220px 1fr;gap:16px">
+                <img src="https://i.ytimg.com/vi/${videoId}/hqdefault.jpg" style="border-radius:12px;width:100%" referrerpolicy="no-referrer">
+                <div>
+                    <h2>${title}</h2>
+                    <p><b>视频ID:</b> ${videoId}</p>
+                </div>
+            </div>
+            <button class="ep focusable" style="margin-top:25px;width:100%;padding:18px;font-size:18px">▶ 播放</button>`;
+
+        $('#closeBtn').onclick = () => $('#detailSheet').classList.remove('active');
+        $('#detailPanel .ep').onclick = () => {
+            if (window.fm?.play) {
+                window.fm.play(`push://https://www.youtube.com/watch?v=${videoId}`, title);
+            } else {
+                window.open(`https://www.youtube.com/watch?v=${videoId}`);
+            }
+        };
+    }
+
+    // 启动
+    const fm = await waitFm();
+    await initKey(fm);
+    $('#searchForm').onsubmit = (e) => {
+        e.preventDefault();
+        const q = $('#kw').value.trim();
+        if (q) doSearch(q);
+    };
+
+    loadCategory(0);   // 默认加载第一个分类
+})();
+</script>
+</body>
+</html>

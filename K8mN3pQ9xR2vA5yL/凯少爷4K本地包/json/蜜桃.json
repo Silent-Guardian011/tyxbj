@@ -1,0 +1,23 @@
+{
+    "作者": "h",
+    "站名": "蜜桃",
+    "请求头": "User-Agent@Mozilla/5.0 (Linux；； Android 16；； 2510DRK44C Build/BP2A.250605.031.A3) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/143.0.7499.192 Mobile Safari/537.36",
+    "域名-c": "https://dfdfa324e.tjacq.com",
+    "主页url": "https://mtyyfe.cc/",
+	"数组": "<article class=\"fg-card\">&&</article>||少女--aria-expanded=\"false\">少女</a>&&</ul>分割(前:<li>)||廠牌--aria-expanded=\"false\">廠牌</a>&&</ul>分割(前:<li>)||麻豆傳媒映畫--aria-expanded=\"false\">麻豆傳媒映畫</a>&&</ul>分割(前:<li>)||麻友探花合集--aria-expanded=\"false\">麻友&&</ul>分割(前:<li>)||直播--aria-expanded=\"false\">直播</a>&&</ul>分割(前:<li>)||亂倫圈--aria-expanded=\"false\">亂倫圈</a>&&</ul>分割(前:<li>)||次元动漫--aria-expanded=\"false\">次元&&</ul>分割(前:<li>)||AV--aria-expanded=\"false\">AV</a>&&</ul>分割(前:<li>)||歐美--aria-expanded=\"false\">歐美</a>&&</ul>分割(前:<li>)",
+	"标题": "alt=\"&&\"||少女,廠牌,麻豆傳媒映畫,麻友探花合集,直播,亂倫圈,次元动漫,AV,歐美--\">&&</a>",
+	"副标题": "<p>&&</p>",
+	"图片": "data-src=\"&&\"",
+	"链接": "<a href=\"&&\"||少女,廠牌,麻豆傳媒映畫,麻友探花合集,直播,亂倫圈,次元动漫,AV,歐美--href=\"&&\"+{catePg}/",
+	"简介": "<div class=\"fg-video-meta\">*<span>&&</span>+<div class=\"fg-video-meta\">*<span>发行日期*</span>*<span>&&</span>",
+	"嗅探词": "https://dfdfa324e.tjacq.com/video/",
+    "跳转播放链接": "{{域名-c}}+\"rawPath\":\"&&\"",
+	"直接播放": "1",
+	"搜索模式": "1",
+    "二级目录": "少女,廠牌,麻豆傳媒映畫,麻友探花合集,直播,亂倫圈,次元动漫,AV,歐美|folder-0-0-H",
+    "二级ID": "",
+    "特殊分类链接": "最新${{主页url}}category/newUpdate/{catePg}/",
+	"搜索url": "{{主页url}}search/{wd}/{pg}/",
+    "分类url": "{{主页url}}category/{cateId}/",
+    "分类": "最新#少女$cate29#廠牌$cate40#麻豆傳媒映畫$cate58#麻友探花合集$cate68#直播$cate77#亂倫圈$cate84#次元动漫$cate92#AV$cate101#歐美$cate117"
+}

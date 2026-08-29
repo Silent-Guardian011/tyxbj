@@ -1,0 +1,20 @@
+{
+    "作者": "h",
+    "站名": "lissav",
+    "请求头": "User-Agent@Mozilla/5.0 (Linux；； Android 16；； 2407FRK8EC Build/BP2A.250605.031.A3) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/137.0.7151.115 Mobile Safari/537.36",
+    "发布页": "",
+    "主页url": "https://lissav.net/",
+    "数组二次截取": "",
+    "数组": "<video class=\"streamit-video-card__preview-video\"&&<i class=\"ph ph-plus streamit-video-card__watch-later-icon-plus\"||类型--<div class=\"img-box position-relative\">&&<div class=\"rounded-3 streamit-genre-swatch\"||演员--<h2 class=\"h5 text-white fw-bold mb-1 text-break\">&&<div class=\"mt-2 mt-md-3 d-flex flex-wrap gap-2 justify-content-center\"",
+    "标题": "data-title=\"&&\"||类型--title=\"&&\"||演员--\">&&</a>",
+    "图片": "data-poster=\"&&\"",
+    "副标题": "<p class=\"small streamit-actor-list-profile__meta mb-1 mb-md-1\">&&</p>",
+    "链接": "href=\"&&\"||类型--href=\"&&\"+/page/{catePg}||演员--href=\"&&\"+/page/{catePg}",
+    "搜索模式": "1",
+    "搜索url": "https://lissav.net/asian/zh-CN/videos/search/{wd}/page/{pg}",
+    "二级目录": "类型|folder-0-0-H#演员|folder-0-0-H",
+    "二级ID": "",
+    "特殊分类链接": "类型$https://lissav.net/asian/zh-CN/genres#演员$https://lissav.net/asian/zh-CN/actors/page/{catePg}",
+    "分类url": "https://lissav.net/asian/zh-CN/videos/{cateId}/page/{catePg};;z",
+    "分类": "最新上映$new-releases#最近更新$recent#今日热门$hot/today#本周热门$hot/week#本月热门$hot/month#类型$genres#演员$actors"
+}

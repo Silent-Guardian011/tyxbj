@@ -1,0 +1,23 @@
+{
+    "作者": "h",
+    "站名": "花都",
+    "请求头": "User-Agent@Mozilla/5.0 (Linux；； Android 16；； 2510DRK44C Build/BP2A.250605.031.A3) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/143.0.7499.192 Mobile Safari/537.36",
+	"主页url": "https://hd22.huadudm.com/",
+	"数组": "<li class=\"col-md-5 col-sm-4 col-xs-2\">&&</li>",
+	"标题": "title=\"&&\"",
+	"图片": "data-original=\"&&\"",
+	"链接": "{{主页url}}vodplay/+href=\"/voddetail/&&.html\"+-1-1.html",
+	"嗅探词": ".m3u8",
+	"直接播放": "1",
+	"搜索模式": "1",
+	"搜索url": "{{主页url}}vodsearch/{wd}----------{pg}---.html",
+	"特殊分类链接":"自定义词条${{主页url}}vodsearch/{cateId}----------{catePg}---.html",
+    "分类url": "{{主页url}}vodshow/{cateId}--{by}---{letter}---{catePg}---.html",
+    "分类": "中文字幕$1#无字幕$2#国产$3#欧美$4#动漫$5#自定义词条$春药",
+    "类型": "全部$1#中字无码$8#中字有码$6||全部$2#步兵无码$9#骑兵有码$7||全部$3#溏心vlog$13#国产传媒$11#国产精品$10||全部$4#欧美中字$12||全部$5#中字里番$14#3D动漫$15||春药&人妻&按摩&精油",
+    "字母": "A&B&C&D&E&F&G&H&I&J&K&L&M&N&O&P&Q&R&S&T&U&V&W&X&Y&Z",
+    "排序": "时间$time#人气$hits#点赞$up"
+    
+}
+
+//类型：精油以后的内容为自定义搜索内容。按需改动。在"类型":的最后添加A&B&C&D即可。不限词条不限数量。如&男性自慰&瑜伽裤&白虎。

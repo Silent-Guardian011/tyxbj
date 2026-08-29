@@ -1,0 +1,14 @@
+{
+  "sites": [
+    {
+      "key": "local_media_hub_v62",
+      "name": "本地影仓 v7.0|[本地]",
+      "type": 3,
+      "api": "https://jwf.gtu.qzz.io/jwf?file=v7.1.py",
+      "ext": "{\"package_service_url\":\"https://jwf.gtu.qzz.io/\",\"package_download_sites\":[{\"id\":\"cf-service\",\"name\":\"潇洒\",\"url\":\"https://jwf.gtu.qzz.io/\",\"source_type\":\"builtin\",\"site_enabled\":true,\"live_enabled\":true,\"health_enabled\":true}],\"online_repositories\":[{\"name\":\"CF在线仓库\",\"url\":\"https://jwf.gtu.qzz.io/jwf/repository/repository.json\",\"enabled\":true}]}",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 0
+    }
+  ]
+}

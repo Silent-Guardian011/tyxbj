@@ -1,0 +1,21 @@
+{
+    "作者": "h",
+    "站名": "傻傻",
+    "请求头": "User-Agent@Mozilla/5.0 (Linux；； Android 16；； 2407FRK8EC Build/BP2A.250605.031.A3) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/137.0.7151.115 Mobile Safari/537.36",
+    "发布页": "",
+    "主页url": "https://www.shczrgs.cn/",
+    "数组二次截取": "",
+    "数组": "<div class=\"card\">&&/a></div>*</div>*</div>*</div>||类型--<a class=\"nav-link\"&&</li>[不包含:http#index#page]",
+    "标题": "alt=\"&&\"||类型--<p>&&</p>",
+    "图片": "src=\"&&\"",
+    "链接": "href=\"&&\"||类型--https://www.shczrgs.cn/cat/+href=\"/cat/&&\"+?page={catePg}",
+    "嗅探词": ".mp4#.m3u8",
+    "直接播放": "1",
+    "搜索模式": "1",
+    "搜索url": "https://www.shczrgs.cn/q/{wd}?category_id=&page={pg}",
+    "二级目录": "类型|folder-0-0-H",
+    "二级ID": "",
+    "特殊分类链接": "最新$https://www.shczrgs.cn/?page={catePg}#类型$https://www.shczrgs.cn/category",
+    "分类url": "https://www.shczrgs.cn/?sort={cateId}&page={catePg};;z",
+    "分类": "最多$hits#推荐$score#最好$likes#最新#类型"
+}

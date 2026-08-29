@@ -1,0 +1,22 @@
+{
+    "作者": "",
+    "站名": "看av",
+    "请求头": "User-Agent@Mozilla/5.0 (Linux；； Android 16；； 2407FRK8EC Build/BP2A.250605.031.A3) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/137.0.7151.115 Mobile Safari/537.36",
+    "发布页": "",
+    "主页url": "https://kanav.vip/",
+    "数组二次截取": "",
+    "数组": "<li class=\"\">&&<div class=\"sub\">||演员--<li>&&<div class=\"sub\">",
+    "标题": "<h3 class=\"title\">&&</h3>||演员--<div class=\"title\">&&</div></h2>",
+    "图片": "data-original=\"&&\"||演员--data-original=\"&&\"",
+    "副标题": "",
+    "链接": "<a href=\"&&\"||演员--<a href=\"&&\"+?page={catePg}",
+    "跳转播放链接": "const source*=*'&&';",
+    "嗅探词": "",
+    "搜索模式": "1",
+    "搜索url": "https://kanav.vip/s/page/{pg}/wd/{wd}/",
+    "二级目录": "演员|folder-0-0-H",
+    "二级ID": "演员$<a href=\"/actor/detail/&&/\"",
+    "特殊分类链接": "演员$https://kanav.vip/actor-{catePg}/",
+    "分类url": "https://kanav.vip/{cateId}-{catePg}/;;z",
+    "分类": "演员$actor"
+}

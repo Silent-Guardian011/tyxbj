@@ -1,0 +1,500 @@
+{
+    "sites": [
+        {
+            "key": "360资源_CMS",
+            "name": "360资源┃CMS",
+            "type": 1,
+            "api": "https://360zy.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "丫丫资源_CMS",
+            "name": "丫丫资源┃CMS",
+            "type": 1,
+            "api": "https://cj.yayazy.net/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "光速资源_CMS",
+            "name": "光速资源┃CMS",
+            "type": 1,
+            "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "天涯影视资源_CMS",
+            "name": "天涯影视资源┃CMS",
+            "type": 1,
+            "api": "https://tyyszyapi.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "好好资源_CMS",
+            "name": "好好资源┃CMS",
+            "type": 1,
+            "api": "https://haohuazy.com/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "无尽资源_CMS",
+            "name": "无尽资源┃CMS",
+            "type": 1,
+            "api": "https://api.wujinapi.me/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "暴风资源_CMS",
+            "name": "暴风资源┃CMS",
+            "type": 1,
+            "api": "https://bfzyapi.com/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "最大资源_CMS",
+            "name": "最大资源┃CMS",
+            "type": 1,
+            "api": "http://zuidazy.me/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "极速资源_CMS",
+            "name": "极速资源┃CMS",
+            "type": 1,
+            "api": "https://jszyapi.com/api.php/provide/vod/at/json",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "爱奇艺资源_CMS",
+            "name": "爱奇艺资源┃CMS",
+            "type": 1,
+            "api": "https://iqiyizyapi.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "牛牛资源_CMS",
+            "name": "牛牛资源┃CMS",
+            "type": 1,
+            "api": "https://api.niuniuzy.me/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "猫眼资源_CMS",
+            "name": "猫眼资源┃CMS",
+            "type": 1,
+            "api": "https://api.maoyanapi.top/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "索尼采集站_CMS",
+            "name": "索尼采集站┃CMS",
+            "type": 1,
+            "api": "https://suonizy.net/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "红牛资源_CMS",
+            "name": "红牛资源┃CMS",
+            "type": 1,
+            "api": "http://hongniuzy2.com/api.php/provide/vod/from/hnm3u8",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "茅台资源站_CMS",
+            "name": "茅台资源站┃CMS",
+            "type": 1,
+            "api": "https://mtzy5.com/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "虎牙资源_CMS",
+            "name": "虎牙资源┃CMS",
+            "type": 1,
+            "api": "",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "豆瓣资源站_CMS",
+            "name": "豆瓣资源站┃CMS",
+            "type": 1,
+            "api": "https://dbzy.tv/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "速播资源_CMS",
+            "name": "速播资源┃CMS",
+            "type": 1,
+            "api": "https://subocj.com/api.php/provide/vod/at/json",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "速播资源站_CMS",
+            "name": "速播资源站┃CMS",
+            "type": 1,
+            "api": "https://www.suboziyuan.net/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "金鹰资源_CMS",
+            "name": "金鹰资源┃CMS",
+            "type": 1,
+            "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "155资源_CMS",
+            "name": "155资源┃CMS",
+            "type": 1,
+            "api": "https://155api.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "非凡采集站_CMS",
+            "name": "非凡采集站┃CMS",
+            "type": 1,
+            "api": "https://ffzy5.tv/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "Alvin_CMS",
+            "name": "Alvin┃CMS",
+            "type": 1,
+            "api": "http://lbapiby.com/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "飘零影院_CMS",
+            "name": "飘零影院┃CMS",
+            "type": 1,
+            "api": "https://p2100.net/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "JKUN资源_CMS",
+            "name": "JKUN资源┃CMS",
+            "type": 1,
+            "api": "https://jkunzyapi.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "魔都资源_CMS",
+            "name": "魔都资源┃CMS",
+            "type": 1,
+            "api": "https://www.mdzyapi.com/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "丝袜资源_CMS",
+            "name": "丝袜资源┃CMS",
+            "type": 1,
+            "api": "https://siwazyw.tv/api.php/provide/vod/at/json/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "乐播资源_CMS",
+            "name": "乐播资源┃CMS",
+            "type": 1,
+            "api": "https://lbapi9.com/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "大地资源_CMS",
+            "name": "大地资源┃CMS",
+            "type": 1,
+            "api": "https://dadiapi.com/api.php",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "爱坤资源_CMS",
+            "name": "爱坤资源┃CMS",
+            "type": 1,
+            "api": "https://ikunzyapi.com/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "大奶子资源_CMS",
+            "name": "大奶子资源┃CMS",
+            "type": 1,
+            "api": "https://apidanaizi.com/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "奶香香资源_CMS",
+            "name": "奶香香资源┃CMS",
+            "type": 1,
+            "api": "https://naixxzy.com/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "小鸡资源_CMS",
+            "name": "小鸡资源┃CMS",
+            "type": 1,
+            "api": "https://api.xiaojizy.live/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "桃花资源_CMS",
+            "name": "桃花资源┃CMS",
+            "type": 1,
+            "api": "https://thzy1.me/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "森林资源_CMS",
+            "name": "森林资源┃CMS",
+            "type": 1,
+            "api": "https://slapibf.com/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "樱花资源_CMS",
+            "name": "樱花资源┃CMS",
+            "type": 1,
+            "api": "https://m3u8.apiyhzy.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "湿乐园_CMS",
+            "name": "湿乐园┃CMS",
+            "type": 1,
+            "api": "https://xxavs.com/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "滴滴资源_CMS",
+            "name": "滴滴资源┃CMS",
+            "type": 1,
+            "api": "https://api.ddapi.cc/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "玉兔资源_CMS",
+            "name": "玉兔资源┃CMS",
+            "type": 1,
+            "api": "https://apiyutu.com/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "番号资源_CMS",
+            "name": "番号资源┃CMS",
+            "type": 1,
+            "api": "http://fhapi9.com/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "番茄资源_CMS",
+            "name": "番茄资源┃CMS",
+            "type": 1,
+            "api": "https://fqzy.me//api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "百花资源_CMS",
+            "name": "百花资源┃CMS",
+            "type": 1,
+            "api": "https://bhziyuan.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "精品X资源_CMS",
+            "name": "精品X资源┃CMS",
+            "type": 1,
+            "api": "https://www.jingpinx.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "细胞网资源_CMS",
+            "name": "细胞网资源┃CMS",
+            "type": 1,
+            "api": "https://www.xxibaozyw.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "老色逼资源_CMS",
+            "name": "老色逼资源┃CMS",
+            "type": 1,
+            "api": "https://apilsbzy1.com/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "色猫资源_CMS",
+            "name": "色猫资源┃CMS",
+            "type": 1,
+            "api": "https://caiji.semaozy.net/inc/api.php",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "越南资源_CMS",
+            "name": "越南资源┃CMS",
+            "type": 1,
+            "api": "https://api.vnzyz.com/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "辣椒资源_CMS",
+            "name": "辣椒资源┃CMS",
+            "type": 1,
+            "api": "https://apilj.com/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "香蕉资源_CMS",
+            "name": "香蕉资源┃CMS",
+            "type": 1,
+            "api": "https://www.xiangjiaozyw.com/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "麻豆资源_CMS",
+            "name": "麻豆资源┃CMS",
+            "type": 1,
+            "api": "https://91md.me/api.php/provide/vod/",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "黄色仓库资源_CMS",
+            "name": "黄色仓库资源┃CMS",
+            "type": 1,
+            "api": "https://hsckzy888.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "黑料资源_CMS",
+            "name": "黑料资源┃CMS",
+            "type": 1,
+            "api": "https://heiliaozyapi.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "ok资源站_CMS",
+            "name": "ok资源站┃CMS",
+            "type": 1,
+            "api": "https://api.okzy.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "u酷资源站_CMS",
+            "name": "u酷资源站┃CMS",
+            "type": 1,
+            "api": "https://api.ukuzy.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "优质资源库_CMS",
+            "name": "优质资源库┃CMS",
+            "type": 1,
+            "api": "https://api.yzzy.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "如意资源站_CMS",
+            "name": "如意资源站┃CMS",
+            "type": 1,
+            "api": "https://api.ryzy.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "快车资源站_CMS",
+            "name": "快车资源站┃CMS",
+            "type": 1,
+            "api": "https://api.kczy.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "新浪资源站_CMS",
+            "name": "新浪资源站┃CMS",
+            "type": 1,
+            "api": "https://api.xlzy.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "红牛资源站_CMS",
+            "name": "红牛资源站┃CMS",
+            "type": 1,
+            "api": "https://api.hnzy2.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "闪电资源_CMS",
+            "name": "闪电资源┃CMS",
+            "type": 1,
+            "api": "https://api.sdzy.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "雅集资源站_CMS",
+            "name": "雅集资源站┃CMS",
+            "type": 1,
+            "api": "https://api.yjzy.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        },
+        {
+            "key": "ck资源站_CMS",
+            "name": "ck资源站┃CMS",
+            "type": 1,
+            "api": "https://api.ckzy.com/api.php/provide/vod",
+            "searchable": 1,
+            "quickSearch": 1
+        }
+    ]
+}

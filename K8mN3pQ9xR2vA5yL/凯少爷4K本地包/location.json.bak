@@ -1,0 +1,13 @@
+{
+  "sites": [
+    {
+      "key": "local_media_hub_v31",
+      "name": "本地影仓|[本地]",
+      "type": 3,
+      "api": "./本地影仓-v3.1.py",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 0
+    }
+  ]
+}

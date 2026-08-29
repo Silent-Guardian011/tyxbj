@@ -1,0 +1,11 @@
+{
+    "主页url": "https://m.xiaoyou6.cn/",
+    "数组": "p:.stui-vodlist__box",
+    "标题": "p:->title",
+    "图片": "p:->data-original",
+    "链接": "p:->href",
+    "分类url": "https://m.xiaoyou6.cn/vodshow/{cateId}-{area}-------{catePg}---{year}/",
+    "分类数组": "&&</ul>",
+    "分类标题": ">&&</a>",
+    "分类ID": "/vodtype/&&.html"
+}

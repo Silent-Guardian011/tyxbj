@@ -1,0 +1,25 @@
+{
+    "作者": "h",
+    "站名": "黄色仓库",
+    "请求头": "User-Agent@Mozilla/5.0 (Linux；； Android 16；； 2510DRK44C Build/BP2A.250605.031.A3) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/143.0.7499.192 Mobile Safari/537.36",
+    "发布页": "",
+    "主页url": "https://www.hsck.sbs/",
+    "数组二次截取": "",
+    "数组": "<div class=\"stui-vodlist__box\">&&</li>",
+    "标题": "title=\"&&\"",
+    "副标题": "<span class=\"pull-right\">&&</span>+<span class=\"pull-right\">*</span>&&</p>",
+    "图片": "data-original=\"&&\"",
+    "链接": "href=\"&&\"",
+    "嗅探词": ".m3u8",
+    "直接播放": "1",
+    "跳转播放链接": "urlDecode(src=\"https://player.centercdn.top/player.html?video_url=&&\")",
+    "搜索模式": "1",
+    "搜索url": "https://www.hsck.sbs/index.php/vod/search/page/{pg}/wd/{wd}.html",
+    "特殊分类链接": "中字,日韩,国产,欧美,麻豆$https://www.hsck.sbs/index.php/vod/type/id/{cateId}/page/{catePg}.html",
+    "分类url": "https://www.hsck.sbs/index.php/vod/search/page/{catePg}/wd/{cateId}.html;;z",
+    "分类": "中字$2#日韩$5#国产$3#欧美$4#麻豆$1#片商$麻豆#自定义词条$春药",
+    "类型": "空||空||空||空||空||麻豆传媒$麻豆#91制片厂$91制片厂#蜜桃影像$蜜桃影像#果冻传媒$果冻传媒#星空无限$星空无限#天美传媒$天美传媒#精东影业$精东影业#皇家华人$皇家华人#糖心Vlog$糖心Vlog#萝莉社$萝莉社#性视界$性视界传媒#糖心Vlog$兔子先生#草霉视频$草霉视频#玩偶姐姐$玩偶姐姐#爱豆传媒$爱豆传媒#91茄子$91茄子#扣扣传媒$扣扣传媒#爱豆传媒$爱豆传媒#SA国际传媒$SA国际传媒#杏吧$杏吧原创#大象传媒$大象传媒#乌托邦$乌托邦#69传媒$69传媒#成人头条$成人头条#乌鸦传媒$乌鸦传媒#香蕉视频$香蕉视频||春药&精油&按摩&人妻"
+}
+
+
+//&人妻以后的内容为自定义搜索内容。可按需改动。在"类型":的最后添加A&B&C&D即可。不限词条不限数量。如&人妻&瑜伽裤&白虎。

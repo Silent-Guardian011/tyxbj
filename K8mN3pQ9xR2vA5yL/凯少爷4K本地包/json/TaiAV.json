@@ -1,0 +1,23 @@
+{
+    "作者": "h",
+    "站名": "TaiAV",
+    "请求头": "User-Agent@Mozilla/5.0 (Linux；； Android 16；； 2510DRK44C Build/BP2A.250605.031.A3) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/143.0.7499.192 Mobile Safari/537.36",
+    "编码": "UTF-8",
+	"主页url": "https://dottaia.lol/",
+	"直接播放": "1",
+	"搜索模式": "1",
+	"数组二次截取": "",
+	"数组": "<div class=\"uk-card-media-top\">&&class=\"video-box-info[不包含:廣告]||分类--<div>&&</div>",
+	"标题": "alt=\"&&\"||分类--uk-icon\">&&</a>",
+	"图片": "<img src=\"&&\"",
+	"链接": "<a href=\"&&\"||分类--<a href=\"&&\"+?page={catePg}",
+	"嗅探词": ".m3u8",
+	"搜索url": "{{主页url}}cn/search?q={wd}&page={pg}",
+	"二级目录": "分类|folder-0-0-H",
+	"特殊分类链接": "分类${{主页url}}discover#自定义词条${{主页url}}cn/search?q={cateId}&page={catePg}",
+    "二级ID": "",
+    "分类url": "{{主页url}}{cateId};;z",
+    "分类": "热门$hots#随机$random#分类#自定义词条$春药" ,
+    "类型": "空||空||空||春药&人妻&少女&精油&捅主任"
+   }
+   
