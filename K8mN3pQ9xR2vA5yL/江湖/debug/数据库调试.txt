@@ -1,0 +1,70 @@
+=== 调试日志生成时间: 2025-10-30 16:46:08 ===
+
+=== 调试日志生成时间: 2025-10-30 16:46:09 ===
+
+[2025-10-30 16:46:10] 数据库: 找到数据表: categories, videos, sqlite_sequence, crawl_log
+[2025-10-30 16:46:10] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/koreanporn.db, 找到视频: 0个
+[2025-10-30 16:46:10] 数据库: 找到数据表: categories, videos, meta, crawl_state
+[2025-10-30 16:46:11] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/lsp_videos (大).db, 找到视频: 1000个
+[2025-10-30 16:46:11] 数据库: 找到数据表: categories, videos, meta, crawl_state
+[2025-10-30 16:46:11] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/lsp_videos.db, 找到视频: 1000个
+[2025-10-30 16:46:11] 数据库: 找到数据表: uploader, video
+=== 调试日志生成时间: 2025-10-30 16:46:16 ===
+
+=== 调试日志生成时间: 2025-10-30 16:46:16 ===
+
+[2025-10-30 16:46:17] 数据库: 找到数据表: categories, videos, meta, crawl_state
+[2025-10-30 16:46:17] 数据库: 找到数据表: categories, videos, sqlite_sequence, crawl_log
+[2025-10-30 16:46:17] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/koreanporn.db, 找到视频: 0个
+[2025-10-30 16:46:18] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/lsp_videos (大).db, 找到视频: 1000个
+=== 调试日志生成时间: 2025-10-30 16:46:18 ===
+
+[2025-10-30 16:46:18] 数据库: 找到数据表: categories, videos, meta, crawl_state
+=== 调试日志生成时间: 2025-10-30 16:46:18 ===
+
+[2025-10-30 16:46:19] 数据库: 找到数据表: categories, videos, sqlite_sequence, crawl_log
+[2025-10-30 16:46:19] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/koreanporn.db, 找到视频: 0个
+[2025-10-30 16:46:19] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/lsp_videos (大).db, 找到视频: 1000个
+[2025-10-30 16:46:20] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/torrentgalaxy的副本.db, 找到视频: 141074个
+=== 调试日志生成时间: 2025-10-30 16:46:22 ===
+
+[2025-10-30 16:46:22] 数据库: 找到数据表: categories, videos, meta, crawl_state
+[2025-10-30 16:46:23] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/lsp_videos.db, 找到视频: 1000个
+=== 调试日志生成时间: 2025-10-30 16:46:23 ===
+
+[2025-10-30 16:46:24] 数据库: 找到数据表: categories, videos, meta, crawl_state
+=== 调试日志生成时间: 2025-10-30 16:46:24 ===
+
+[2025-10-30 16:46:24] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/lsp_videos.db, 找到视频: 1000个
+[2025-10-30 16:46:24] 数据库: 找到数据表: categories, videos, meta, crawl_state
+[2025-10-30 16:46:25] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/lsp_videos (大).db, 找到视频: 1000个
+=== 调试日志生成时间: 2025-10-30 16:46:26 ===
+
+[2025-10-30 16:46:26] 数据库: 找到数据表: categories, videos, meta, crawl_state
+[2025-10-30 16:46:27] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/lsp_videos (大).db, 找到视频: 1000个
+=== 调试日志生成时间: 2025-10-30 16:46:28 ===
+
+=== 调试日志生成时间: 2025-10-30 16:46:28 ===
+
+=== 调试日志生成时间: 2025-10-30 16:46:28 ===
+
+[2025-10-30 16:46:28] 数据库: 找到数据表: categories, videos, sqlite_sequence, crawl_log
+[2025-10-30 16:46:28] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/koreanporn.db, 找到视频: 0个
+[2025-10-30 16:46:28] 数据库: 找到数据表: categories, videos, meta, crawl_state
+[2025-10-30 16:46:29] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/lsp_videos (大).db, 找到视频: 1000个
+[2025-10-30 16:46:30] 数据库: 找到数据表: categories, videos, meta, crawl_state
+[2025-10-30 16:46:30] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/lsp_videos.db, 找到视频: 1000个
+[2025-10-30 16:46:30] 数据库: 找到数据表: uploader, video
+[2025-10-30 16:46:34] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/torrentgalaxy的副本.db, 找到视频: 141074个
+=== 调试日志生成时间: 2025-10-30 16:46:40 ===
+
+=== 调试日志生成时间: 2025-10-30 16:46:41 ===
+
+[2025-10-30 16:46:41] 数据库: 找到数据表: categories, videos, sqlite_sequence, crawl_log
+[2025-10-30 16:46:41] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/koreanporn.db, 找到视频: 0个
+[2025-10-30 16:46:41] 数据库: 找到数据表: categories, videos, meta, crawl_state
+[2025-10-30 16:46:42] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/lsp_videos (大).db, 找到视频: 1000个
+[2025-10-30 16:46:42] 数据库: 找到数据表: categories, videos, meta, crawl_state
+[2025-10-30 16:46:43] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/lsp_videos.db, 找到视频: 1000个
+[2025-10-30 16:46:43] 数据库: 找到数据表: uploader, video
+[2025-10-30 16:46:52] 数据库: 数据库解析完成: /storage/emulated/0/江湖/db/torrentgalaxy的副本.db, 找到视频: 141074个
